@@ -1,11 +1,10 @@
+htfcss: cmbx  font-weight: bold;
+htfcss: cmbxsl  font-weight: bold; font-style: oblique;
 htfcss: cmtt font-family: monospace;
-htfcss: cmbx  font-weight: bold;
-htfcss: cmbxsl  font-weight: bold; font-style: oblique;
-htfcss: cmbx  font-weight: bold;
-htfcss: cmbxsl  font-weight: bold; font-style: oblique;
 File: index.html
 File: index.css
 File: index.tmp
+Font_Class(4,"4"): <span  class="small-caps"></span>
 Css: p.noindent { text-indent: 0em }
 Css: td p.noindent { text-indent: 0em; margin-top:0em; }
 Css: p.nopar { text-indent: 0em; }
@@ -119,9 +118,8 @@ Css: div.author{white-space: nowrap;}
 Css: .quotation {margin-bottom:0.25em; margin-top:0.25em; margin-left:1em; }
 Css: .abstract p {margin-left:5%; margin-right:5%;}
 Css: div.abstract {width:100%;}
-Css: dt.enumerate-enumitem{float:left; clear:left; margin-left:1em; margin-right:1em;}
 --- characters ---
 Font("cmr","10","10","100")
-Font("cmbx","10","10","100")
-Font("cmbx","12","12","120")
+Font("cmcsc","10","10","144")
 Font("cmtt","10","10","100")
+Font("cmbx","10","10","100")
