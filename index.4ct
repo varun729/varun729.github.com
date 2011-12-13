@@ -1,9 +1,0 @@
-\expandafter\ifx\csname doTocEntry\endcsname\relax \expandafter\endinput\fi 
-\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-1000}{QQ2-1-1}{\relax $\o:@@underline: {\hbox {Education}}\mathsurround \z@ $\relax }}{1}\relax 
-\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-2000}{QQ2-1-2}{\relax $\o:@@underline: {\hbox {Work Experience}}\mathsurround \z@ $\relax }}{1}\relax 
-\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-3000}{QQ2-1-3}{\relax $\o:@@underline: {\hbox {Key Academic Projects}}\mathsurround \z@ $\relax }}{1}\relax 
-\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-4000}{QQ2-1-4}{\relax $\o:@@underline: {\hbox {Relevant Courses}}\mathsurround \z@ $\relax }}{2}\relax 
-\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-5000}{QQ2-1-5}{\relax $\o:@@underline: {\hbox {Interests}}\mathsurround \z@ $\relax }}{2}\relax 
-\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-6000}{QQ2-1-6}{\relax $\o:@@underline: {\hbox {Achievements}}\mathsurround \z@ $\relax }}{3}\relax 
-\doTocEntry\toclikesection{}{\csname a:TocLink\endcsname{1}{x1-7000}{QQ2-1-7}{\relax $\o:@@underline: {\hbox {Extra-Curricular Activities}}\mathsurround \z@ $\relax }}{3}\relax 
-\par 
