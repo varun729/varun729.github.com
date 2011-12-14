@@ -20,7 +20,7 @@ public class DataHomepage {
 	
 
 	
-	public DataHomepage(String filename) {
+	public DataHomepage(String filename) throws HpException {
 		owlFile = new File(filename);
 		logger.info("owl file exists : " + owlFile.exists());
 		
@@ -29,7 +29,7 @@ public class DataHomepage {
 		logger.info("ontology model created");
 	}
 
-	private void createModel() {
+	private void createModel() throws HpException {
 		ModelMaker maker = ModelFactory.createFileModelMaker("hp_model");
 		model = maker.createModel("homepage");
 		ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM);
@@ -45,7 +45,7 @@ public class DataHomepage {
 		model.close();
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws HpException {
 		logger.info("begin data collection");
 		DataHomepage data = new DataHomepage("homepage.owl");
 	}

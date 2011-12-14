@@ -26,7 +26,7 @@ public class DataModel {
 		this.owlFile = owlFile;
 	}
 
-	public void load() {
+	public void load() throws HpException {
 		ModelMaker maker = ModelFactory.createFileModelMaker("datamodel");
 		model = maker.createModel("homepage");
 		ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM, model);
@@ -48,7 +48,9 @@ public class DataModel {
 		logger.info("Contact : " + ontModel.getOntClass("http://agrawal-varun.com/homepage.owl#Contact"));
 		List<String> classNames = new ArrayList<String>();
 		while (classes.hasNext()) {
-			classNames.add(((OntClass)classes.next()).getLocalName());
+			String name = ((OntClass)classes.next()).getLocalName();
+			if (name != null)
+				classNames.add(name);
 		}
 		return classNames;
 	}

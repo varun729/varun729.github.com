@@ -9,12 +9,12 @@
     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" > 
   <rdf:Description rdf:nodeID="A0">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://agrawal-varun.com/homepage.owl#Hobby"/>
+    <owl:unionOf rdf:nodeID="A1"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A1">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://agrawal-varun.com/homepage.owl#Varun_Agrawal"/>
+  <rdf:Description rdf:nodeID="A2">
+    <rdf:rest rdf:nodeID="A3"/>
+    <rdf:first rdf:resource="http://agrawal-varun.com/homepage.owl#Project"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://agrawal-varun.com/homepage.owl#start_date">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
@@ -47,10 +47,6 @@
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A2">
-    <owl:unionOf rdf:nodeID="A3"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://agrawal-varun.com/homepage.owl#VA_Contact">
     <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strand Life Sciences, 5th Floor, Kirloskar Business Park, Bellar Road, Hebbal, Bangalore</address>
     <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Varun Agrawal</name>
@@ -75,16 +71,16 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A4">
-    <rdf:rest rdf:nodeID="A5"/>
-    <rdf:first rdf:resource="http://agrawal-varun.com/homepage.owl#Project"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://agrawal-varun.com/homepage.owl#description">
-    <rdfs:domain rdf:nodeID="A6"/>
+    <rdfs:domain rdf:nodeID="A4"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Description of the object. This should be informative, and the reader should get a fairly good idea about it. Also, some implementation details can be highlighted here.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://agrawal-varun.com/homepage.owl#Varun_Agrawal"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://agrawal-varun.com/homepage.owl#contact">
     <rdfs:domain rdf:resource="http://agrawal-varun.com/homepage.owl#Homepage"/>
@@ -101,15 +97,19 @@
     <rdfs:domain rdf:resource="http://agrawal-varun.com/homepage.owl#Contact"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A3">
-    <rdf:rest rdf:nodeID="A0"/>
-    <rdf:first rdf:resource="http://agrawal-varun.com/homepage.owl#Contact"/>
+  <rdf:Description rdf:nodeID="A6">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://agrawal-varun.com/homepage.owl#Hobby"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://agrawal-varun.com/homepage.owl#mobile">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:domain rdf:resource="http://agrawal-varun.com/homepage.owl#Contact"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mobile phone number</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    <rdf:first rdf:resource="http://agrawal-varun.com/homepage.owl#Hobby"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://agrawal-varun.com/homepage.owl#duration">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;p style="margin-top: 0"&gt;
@@ -132,13 +132,9 @@
     &lt;/p&gt;</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A6">
-    <owl:unionOf rdf:nodeID="A4"/>
+  <rdf:Description rdf:nodeID="A4">
+    <owl:unionOf rdf:nodeID="A2"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-  </rdf:Description>
-  <rdf:Description rdf:nodeID="A7">
-    <owl:distinctMembers rdf:nodeID="A1"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://agrawal-varun.com/homepage.owl#hobby">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;p style="margin-top: 0"&gt;
@@ -161,13 +157,13 @@
   <rdf:Description rdf:about="http://agrawal-varun.com/homepage.owl#Hobby">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
   </rdf:Description>
-  <rdf:Description rdf:nodeID="A5">
-    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    <rdf:first rdf:resource="http://agrawal-varun.com/homepage.owl#Hobby"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://agrawal-varun.com/homepage.owl#Contact">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">This is the contact information of a person.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <rdf:rest rdf:nodeID="A6"/>
+    <rdf:first rdf:resource="http://agrawal-varun.com/homepage.owl#Contact"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://agrawal-varun.com/homepage.owl#Homepage">
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&lt;p style="margin-top: 0"&gt;
@@ -193,11 +189,15 @@
     &lt;/p&gt;</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <owl:distinctMembers rdf:nodeID="A5"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://agrawal-varun.com/homepage.owl#name">
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name of the object</rdfs:comment>
-    <rdfs:domain rdf:nodeID="A2"/>
+    <rdfs:domain rdf:nodeID="A0"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
 </rdf:RDF>
