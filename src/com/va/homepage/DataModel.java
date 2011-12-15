@@ -30,12 +30,13 @@ public class DataModel {
 	}
 
 	public void load() throws HpException {
-		ModelMaker maker = ModelFactory.createFileModelMaker("datamodel");
-		model = maker.createModel("homepage");
-		ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM, model);
+//		ModelMaker maker = ModelFactory.createFileModelMaker("datamodel");
+//		model = maker.createModel("homepage");
+		ontModel = ModelFactory.createOntologyModel(OntModelSpec.OWL_DL_MEM, null);
 		try {
 			FileInputStream fis = new FileInputStream(owlFile);
-			model.read(fis, "http://agrawal-varun.com/homepage.owl");
+//			ontModel.read(fis, "http://agrawal-varun.com/homepage.owl", "RDF/XML-ABBREV");
+			ontModel.read(fis, null, "RDF/XML-ABBREV");
 		} catch (FileNotFoundException e) {
 			throw new HpException("The owl file cannot be read : " + owlFile);
 		}
@@ -60,7 +61,7 @@ public class DataModel {
 
 	public List<IProperty> getProperties(String className) {
 		OntClass klass = ontModel.getOntClass(NS + className);
-		ExtendedIterator properties = klass.listDeclaredProperties();
+		ExtendedIterator properties = klass.listDeclaredProperties(false);
 		List<IProperty> props = new ArrayList<IProperty>();
 		while (properties.hasNext()) {
 			OntProperty prop = (OntProperty) properties.next();
