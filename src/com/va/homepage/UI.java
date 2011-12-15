@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.util.List;
 import java.util.logging.Logger;
 
+import property.IProperty;
+
 
 public class UI {
 	private static Logger logger = Logger.getLogger("com.va.homepage");
@@ -24,7 +26,9 @@ public class UI {
 		List<String> classes = model.getClasses();
 		logger.info("Classes : " + classes);
 		String option = getChoice(classes, null);
-		List<IProperty> properties = model.getProperties("aClass");
+		List<IProperty> properties = model.getProperties(option);
+		
+		logger.info("Properties : " + properties);
 		
 		
 	}
@@ -43,7 +47,7 @@ public class UI {
 		int input = getInput(choice, 5, "Invalid input. Enter again : ");
 		logger.info("Input choice : " + input);
 		
-		return null;
+		return items.get(input-1);
 	}
 
 	private int getInput(int choices, int maxTries, String messageIfWrong) throws HpException {

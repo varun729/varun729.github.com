@@ -6,9 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
+import property.IProperty;
+
 import com.hp.hpl.jena.ontology.OntClass;
 import com.hp.hpl.jena.ontology.OntModel;
 import com.hp.hpl.jena.ontology.OntModelSpec;
+import com.hp.hpl.jena.ontology.OntProperty;
 import com.hp.hpl.jena.rdf.model.Model;
 import com.hp.hpl.jena.rdf.model.ModelFactory;
 import com.hp.hpl.jena.rdf.model.ModelMaker;
@@ -55,9 +58,16 @@ public class DataModel {
 		return classNames;
 	}
 
-	public List<IProperty> getProperties(String string) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<IProperty> getProperties(String className) {
+		OntClass klass = ontModel.getOntClass(NS + className);
+		ExtendedIterator properties = klass.listDeclaredProperties();
+		List<IProperty> props = new ArrayList<IProperty>();
+		while (properties.hasNext()) {
+			OntProperty prop = (OntProperty) properties.next();
+			IProperty iprop = DataFactory.getProperty(prop);
+			props.add(iprop);
+		}
+		return props;
 	}
 
 }
