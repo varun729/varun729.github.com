@@ -66,11 +66,13 @@ padding-left: 0.5em;
 a #link {
 margin: 0.25em;
 padding: 0.25em;
-padding-left: 2em;
+padding-left: 1em;
 background-color: #ffffff;
-background-image: url("../img/pointer.png");
+/*background-image: url("../img/pointer.png");*/
+background-image: url("../img/dot.gif");
+background-position: left center;
 background-repeat: no-repeat;
-background-size: 1.2em 1.2em;
+background-size: 0.7em 0.7em;
 }
 
 a:link #link {
