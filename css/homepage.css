@@ -91,6 +91,38 @@ a:active #link {
 
 }
 
+#item {
+margin: 3em 1em 3em 1em;
+padding: 1em;
+background-color: #eeeeee;
+}
+
+#item .title {
+font: bold italic large serif;
+padding-bottom: 0.25em;
+border-bottom: 1px solid black;
+}
+
+#item .article {
+font: normal serif;
+margin: 0.5em;
+}
+
+#item .link {
+font: italic normal serif;
+background-color:#ffffff;
+padding:0.25em;
+}
+
+#item pre {
+margin:2em;
+padding:0.5em;
+padding-left:1em;
+background-color:#333333;
+color:#eeeeee;
+line-height: 1.5em;
+}
+
 * html body{ /*IE6 hack*/
 padding: 0 0 0 15em; /*Set value to (0 0 0 WidthOfFrameDiv)*/
 }
