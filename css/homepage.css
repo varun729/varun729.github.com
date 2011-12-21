@@ -37,7 +37,7 @@ left: 15em; /*Set left value to WidthOfFrameDiv*/
 right: 0;
 bottom: 0;
 overflow: auto; 
-background: #ffffff;
+background: #eeeeee;
 }
 
 .in{
@@ -63,32 +63,36 @@ background-color: #bbbbbb;
 padding-left: 0.5em;
 }
 
+#links a {
+text-decoration: none;
+}
+
 a #link {
 margin: 0.25em;
 padding: 0.25em;
 padding-left: 1em;
-background-color: #ffffff;
-/*background-image: url("../img/pointer.png");*/
+background-color: #333333;
 background-image: url("../img/dot.gif");
 background-position: left center;
 background-repeat: no-repeat;
 background-size: 0.7em 0.7em;
+color: #ffffff;
 }
 
 a:link #link {
-background-color: #ffffff;
+background-color: #333333;
+color: #ffffff;
 }
 
 a:visited #link {
-
+color: #dddddd;
 }
 
 a:hover #link {
-background-color: #bbbbbb;
+background-color: #111111;
 }
 
 a:active #link {
-
 }
 
 #item {
