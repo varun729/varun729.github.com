@@ -44,6 +44,13 @@ Now that I enjoy using terminal I try to do most of my work through it. Trying t
 </p>
 <p>I am using <em>Fedora 16</em>, and loving every bit of it. In the beginning I had few issues with getting the wifi driver to work, but after spending some 2 hours, I was able to fix it. Trying to fix this, I got excited to know more about the internals of Linux, and have decided to spend sometime on it. Currently I have started reading the book - <em>The C Programming Language (K & R)</em>, to learn the nuances of C language, specially pointers. I also intend to study about the <em>kernel</em>.
 </p>
+<p>
+Changing the PRIMARY PROMPT (search for PROMPTING in 'man page') to include date and time:
+<pre class="asis">
+Add the following command to .bashrc 
+PS1=`echo $PS1 | sed 's/\[\(.*\)\]\(.*\)/\[\\\\d \\\\A \1\]\2 /g'`
+</pre>
+</p>
 </div>
 </div>
 <!-- ITEM1 over -->
