@@ -119,8 +119,17 @@ margin: 0.5em;
 
 #item .link {
 font: italic normal serif;
-background-color:#ffffff;
+background-color:#333333;
 padding:0.25em;
+}
+
+#item .link a {
+color: #ffffff;
+text-decoration: none;
+}
+
+#item .link a:hover {
+color: #888888;
 }
 
 #item pre {
