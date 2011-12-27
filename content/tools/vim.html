@@ -64,6 +64,7 @@ I also use some sed commands:
 <pre class="asis">
 :%s/text_to_search/text_to_replace/  // this replaces all the occurences of text_to_search
 :s/text_to_search/text_to_replace/   // this replaces all the occurences of text_to_search in the current line
+:5,12s/text_to_search/text_to_replace/   // this replaces all the occurences of text_to_search from line 5 to 12(both inclusive)
 /text_to_find   // searches the text in the document
 n   // to navigate forward in the search results
 N   // to navigate backwards in the search results
