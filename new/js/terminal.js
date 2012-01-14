@@ -16,7 +16,7 @@ $(document).ready(function() {
         var buffer_index = -1;
 
         var home = null;
-        var pwd = "/glossary";
+        var pwd = "/";
         /**
          * load contents from the home.json file
          */
@@ -62,6 +62,8 @@ $(document).ready(function() {
          */
         function new_line_event() {
                 $('.terminal').val(content + '\n' + pre);
+                $('.terminal').scrollTop($('.terminal')[0].scrollHeight -
+                                        $('.terminal').height());
         };
 
         /**
