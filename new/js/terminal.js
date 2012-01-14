@@ -15,6 +15,13 @@ $(document).ready(function() {
         var buffer = Array("");
         var buffer_index = -1;
 
+        /**
+         * TODO help contents
+         */
+        var help_contents = "" +
+"This is a normal help" + "\n" +
+"Spread on multiple lines";
+
         initialize(pre);
 
         /**
@@ -124,10 +131,31 @@ $(document).ready(function() {
         };
 
         /**
+         * reset terminal
+         */
+        function reset() {
+                content = "";
+        };
+
+        /**
+         * show help menu on the terminal
+         */
+        function help() {
+                content += "\n" + help_contents;
+        };
+
+        /**
          * run the command
          */
         function run_command(command) {
-
+                switch(command) {
+                case "clear":
+                        reset();
+                        break;
+                case "help":
+                        help();
+                        break;
+                }
         };
         
         $('.terminal').keydown(function(e) {
