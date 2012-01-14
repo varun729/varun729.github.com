@@ -227,8 +227,11 @@ $(document).ready(function() {
                                 continue;
                         }
                         curr = curr[dirs[i]];
-                        if (curr == null || curr === undefined || 
-                                typeof curr != "object") {
+                        if (curr == null || curr === undefined) {
+                                return false;
+                        }
+                        if (typeof curr != "object") {
+                                error("Path is a file");
                                 return false;
                         }
                 }
@@ -273,12 +276,13 @@ $(document).ready(function() {
                                 new_pwd += children[i] + "/";
                         }
                 }
-                console.log(new_pwd);
                 if (isdir(new_pwd)) {
                         pwd = new_pwd;
+                        content += "\n" + pwd;
                 } else {
                         error("Invalid path '" + new_pwd + "'");
                 }
+                console.log(pwd);
         };
 
         /**
