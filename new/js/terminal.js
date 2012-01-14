@@ -220,6 +220,9 @@ $(document).ready(function() {
                 if (path[0] != "/") {
                         return false;
                 }
+                if (path == "/") {
+                        return true;
+                }
                 var dirs = path.split("/");
                 var curr = home;
                 for (var i=0; i<dirs.length; i++) {
@@ -243,7 +246,7 @@ $(document).ready(function() {
          */
         function cd(child) {
                 var new_pwd = pwd;
-                if (child === undefined) {
+                if (child == null || child === undefined || (/^\s*$/).test(child)) {
                         new_pwd = "/";
                 } else if (child.trim() == ".") {
                         // do nothing

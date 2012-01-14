@@ -1,3 +1,8 @@
+.introduction {
+        font-family: "Lucida Console", "Courier New", "Arial";
+        width: 80;
+}
+
 .terminal {
-/*	resize: none;*/
+        font-family: "Lucida Console", "Courier New", "Arial";
 }
