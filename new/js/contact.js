@@ -9,6 +9,9 @@
 $(document).ready(function() {
         var personal = ['v', 'a', 'r', 'u', 'n', '@', 'a', 'g', 'r', 'a', 'w', 'a', 'l', '-', 'v', 'a', 'r', 'u', 'n', '.', 'c', 'o', 'm'].join("");
         var gmail = ['v', 'a', 'r', 'u', 'n', '7', '2', '9', '@', 'g', 'm', 'a', 'i', 'l', '.', 'c', 'o', 'm'].join("");
+
+        personal = "<a href='mailto:" + personal + "'>" + personal + "</a>";
+        gmail = "<a href='mailto:" + gmail + "'>" + gmail + "</a>";
         var contact = "Contact:\n" + 
                 "    " + personal + "\n" +
                 "    " + gmail + "\n" + 
