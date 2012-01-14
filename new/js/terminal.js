@@ -2,11 +2,11 @@ $(document).ready(function() {
         /**
          * Initialize the terminal
          */
-        function initialize(initial, options) {
+        function initialize(initial, pre) {
                 var term = $('.terminal');
                 term.focus();
-                term.val('');   // TODO Looks like a hack
-                term.val(initial);
+                term.val('');
+                term.val(initial + "\n" + pre);
         };
         var pre = "[guest@agrawal-varun.com]$ ";
         var pre_size = pre.length;
@@ -15,14 +15,30 @@ $(document).ready(function() {
         var buffer = Array("");
         var buffer_index = -1;
 
+        var home = null;
+        var pwd = "/glossary";
+        /**
+         * load contents from the home.json file
+         */
+        $.getJSON('json/home.json', function(data) {
+                home = data;
+        });
+
+        /**
+         * Welcome message
+         */
+        var welcome_msg = "" +
+        "Welcome to the homepage of Varun Agrawal." + "\n\n" +
+        "Spread over multiple lines";
+
         /**
          * TODO help contents
          */
-        var help_contents = "" +
-"This is a normal help" + "\n" +
-"Spread on multiple lines";
+        var help_msg = "" +
+        "This is help";
 
-        initialize(pre);
+        content = welcome_msg;
+        initialize(content, pre);
 
         /**
          * When the enter key is pressed. the events to be fired
@@ -131,9 +147,9 @@ $(document).ready(function() {
         };
 
         /**
-         * reset terminal
+         * clear terminal
          */
-        function reset() {
+        function clear() {
                 content = "";
         };
 
@@ -141,7 +157,32 @@ $(document).ready(function() {
          * show help menu on the terminal
          */
         function help() {
-                content += "\n" + help_contents;
+                content += "\n" + help_msg;
+        };
+
+        /**
+         * show the welcome message
+         */
+        function welcome() {
+                content += "\n" + welcome_msg;
+        };
+
+        /**
+         * list the contents of the current directory
+         */
+        function ls() {
+                var dirs = pwd.substring(1).split("/");
+                var present = home;
+                for (var i=0; i<dirs.length; i++) {
+                        if (dirs[i].length > 0) {
+                                present = present[dirs[i]];
+                        }
+                }
+                var list = Array();
+                for (var i in present) {
+                        list.push(i);
+                }
+                content += "\n" + list.join("\t");
         };
 
         /**
@@ -150,10 +191,16 @@ $(document).ready(function() {
         function run_command(command) {
                 switch(command) {
                 case "clear":
-                        reset();
+                        clear();
                         break;
                 case "help":
                         help();
+                        break;
+                case "welcome":
+                        welcome();
+                        break;
+                case "ls":
+                        ls();
                         break;
                 }
         };
