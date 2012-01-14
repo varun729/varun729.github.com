@@ -41,6 +41,23 @@ $(document).ready(function() {
         initialize(content, pre);
 
         /**
+         * error
+         * @message
+         * @reason
+         */
+        function error(message, reason) {
+                if (message === undefined) {
+                        content += "\nError";
+                        return;
+                }
+                content += "\n  Error   : " + message;
+                if (reason === undefined) {
+                        return;
+                }
+                content += "\n  Reason  : " + reason;
+        };
+
+        /**
          * When the enter key is pressed. the events to be fired
          */
         function new_line_event() {
@@ -84,6 +101,15 @@ $(document).ready(function() {
                 var last = typed();
                 var buff_last = buffer.pop();
                 buffer.push(last);
+        };
+
+        /**
+         * fix last buffer
+         */
+        function fix_last_buffer() {
+                if (buffer_index == buffer.length -1) {
+                        load_buffer();
+                }
         };
 
         /**
@@ -169,6 +195,7 @@ $(document).ready(function() {
 
         /**
          * list the contents of the current directory
+         * TODO color code the files and directories separately
          */
         function ls() {
                 var dirs = pwd.substring(1).split("/");
@@ -186,21 +213,95 @@ $(document).ready(function() {
         };
 
         /**
+         * check if directory is valid
+         * TODO check if this functions properly
+         */
+        function isdir(path) {
+                if (path[0] != "/") {
+                        return false;
+                }
+                var dirs = path.split("/");
+                var curr = home;
+                for (var i=0; i<dirs.length; i++) {
+                        if (dirs[i] == "") {
+                                continue;
+                        }
+                        curr = curr[dirs[i]];
+                        if (curr == null || curr === undefined || 
+                                typeof curr != "object") {
+                                return false;
+                        }
+                }
+                return true;
+        };
+
+        /**
+         * change directory
+         */
+        function cd(child) {
+                var new_pwd = pwd;
+                if (child === undefined) {
+                        new_pwd = "/";
+                } else if (child.trim() == ".") {
+                        // do nothing
+                } else if (child.trim() == "..") {
+                        // previous directory
+                        if (new_pwd == "/") {
+                                error("Cannot move to directory '..'", 
+                                        "Current directory is 'home'");
+                                return;
+                        } else {
+                                var dirs = new_pwd.split("/");
+                                if (dirs[dirs.length-1] == "") {
+                                        dirs.pop();
+                                }
+                                dirs.pop();
+                                new_pwd = dirs.join("/");
+                                if (new_pwd == "") {
+                                        new_pwd = "/";
+                                }
+                        }
+                } else {
+                        if (new_pwd[pwd.length-1] != "/") {
+                                new_pwd += "/";
+                        }
+                        var children = child.split(/\s+/);
+                        for (var i=0; i<children.length; i++) {
+                                if (children[i].length == 0) {
+                                        continue;
+                                }
+                                new_pwd += children[i] + "/";
+                        }
+                }
+                console.log(new_pwd);
+                if (isdir(new_pwd)) {
+                        pwd = new_pwd;
+                } else {
+                        error("Invalid path '" + new_pwd + "'");
+                }
+        };
+
+        /**
          * run the command
          */
         function run_command(command) {
-                switch(command) {
-                case "clear":
+                command = $.trim(command);
+                switch(true) {
+                case (command == "clear"):
                         clear();
                         break;
-                case "help":
+                case (command == "help"):
                         help();
                         break;
-                case "welcome":
+                case (command == "welcome"):
                         welcome();
                         break;
-                case "ls":
+                case (command == "ls"):
                         ls();
+                        break;
+                case ((/^cd($| )/).test(command)):
+                        var child = command.replace(/^cd($| )/, "");
+                        cd(child);
                         break;
                 }
         };
@@ -222,6 +323,7 @@ $(document).ready(function() {
                         if (buffer_index == -1) {
                                 return;
                         }
+                        fix_last_buffer();      // HACK
                         if (input == 38) { // up key
                                 decrement_buf_index();
                         } else {
@@ -258,6 +360,7 @@ $(document).ready(function() {
 
         $('.terminal').mousedown(function(e) {
                 e.preventDefault();
+                $(this).focus();
         });
 
 });
