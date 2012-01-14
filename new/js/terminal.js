@@ -10,7 +10,8 @@ $(document).ready(function() {
         };
         var pre = "[guest@agrawal-varun.com]$ ";
         var pre_size = pre.length;
-        
+
+        var MAX_LINES = 100;
         var content = null;
         var buffer = Array("");
         var buffer_index = -1;
@@ -46,6 +47,34 @@ $(document).ready(function() {
                 switch(action) {
                 case "add":
                         content += "\n" + text;
+                        break;
+                case "new":
+                        content = text;
+                        break;
+                }
+                var lines = content.split(/\n/);
+                if (lines.length > MAX_LINES) {
+                        lines.splice(0, lines.length - MAX_LINES);
+                }
+                content = lines.join("\n");
+        };
+
+        /**
+         * Change the present working directory
+         * @action
+         * @dir the directory should be validated before.
+         */
+        function modify_pwd(action, dir) {
+                switch(action) {
+                case "rel":
+                        // TODO
+                        break;
+                case "base":
+                        pwd = dir;
+                        pwd = pwd.trim();
+                        pwd = pwd.replace(/\/+/, "/");
+                        pwd = pwd.replace(/^(.*)\/$/, "$1");
+                        break;
                 }
         };
 
@@ -187,7 +216,7 @@ $(document).ready(function() {
          * clear terminal
          */
         function clear() {
-                content = "";
+                modify_content("new", "");
         };
 
         /**
@@ -253,6 +282,13 @@ $(document).ready(function() {
         };
 
         /**
+         * print the present working directory
+         */
+        function echo_pwd() {
+                modify_content("add", pwd);
+        };
+
+        /**
          * change directory
          */
         function cd(child) {
@@ -291,7 +327,7 @@ $(document).ready(function() {
                         }
                 }
                 if (isdir(new_pwd)) {
-                        pwd = new_pwd;
+                        modify_pwd("base", new_pwd);
                         modify_content("add", pwd);
                 } else {
                         error("Invalid path '" + new_pwd + "'");
@@ -316,10 +352,15 @@ $(document).ready(function() {
                 case (command == "ls"):
                         ls();
                         break;
+                case (command == "pwd"):
+                        echo_pwd();
+                        break;
                 case ((/^cd($| )/).test(command)):
                         var child = command.replace(/^cd($| )/, "");
                         cd(child);
                         break;
+                default:
+                        error("Invalid command");
                 }
         };
         
@@ -359,7 +400,7 @@ $(document).ready(function() {
                 e.preventDefault();
                 load_buffer();
                 var last = typed();
-                content = $(this).val();
+                modify_content("new", $(this).val());
 
                 run_command(last);
                 reset_buffer();
