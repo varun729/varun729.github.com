@@ -28,8 +28,7 @@ $(document).ready(function() {
          * Welcome message
          */
         var welcome_msg = "" +
-        "Welcome to the homepage of Varun Agrawal." + "\n\n" +
-        "Spread over multiple lines";
+        "Welcome to the homepage of Varun Agrawal.";
 
         /**
          * TODO help contents
@@ -41,20 +40,30 @@ $(document).ready(function() {
         initialize(content, pre);
 
         /**
+         * Change the content
+         */
+        function modify_content(action, text) {
+                switch(action) {
+                case "add":
+                        content += "\n" + text;
+                }
+        };
+
+        /**
          * error
          * @message
          * @reason
          */
         function error(message, reason) {
                 if (message === undefined) {
-                        content += "\nError";
+                        modify_content("add", "Error");
                         return;
                 }
-                content += "\n  Error   : " + message;
+                modify_content("add", "  Error  : " + message);
                 if (reason === undefined) {
                         return;
                 }
-                content += "\n  Reason  : " + reason;
+                modify_content("add", "  Reason : " + reason);
         };
 
         /**
@@ -185,14 +194,14 @@ $(document).ready(function() {
          * show help menu on the terminal
          */
         function help() {
-                content += "\n" + help_msg;
+                modify_content("add", help_msg);
         };
 
         /**
          * show the welcome message
          */
         function welcome() {
-                content += "\n" + welcome_msg;
+                modify_content("add", welcome_msg);
         };
 
         /**
@@ -211,7 +220,7 @@ $(document).ready(function() {
                 for (var i in present) {
                         list.push(i);
                 }
-                content += "\n" + list.join("\t");
+                modify_content("add", list.join("\t"));
         };
 
         /**
@@ -283,11 +292,10 @@ $(document).ready(function() {
                 }
                 if (isdir(new_pwd)) {
                         pwd = new_pwd;
-                        content += "\n" + pwd;
+                        modify_content("add", pwd);
                 } else {
                         error("Invalid path '" + new_pwd + "'");
                 }
-                console.log(pwd);
         };
 
         /**
@@ -361,6 +369,10 @@ $(document).ready(function() {
         
         /**
          * Disabling default mouse actions on the terminal.
+         * TODO the terminal can't be resized because mouse events are eaten
+         *      up. so if you need to do it, give some predefined values which 
+         *      the user can chose by clicking on it, or give a command, which 
+         *      the user can use to resize the terminal.
          * TODO determine selection behaviour of the text on mouse events
          */
         $('.terminal').mouseup(function(e) {
@@ -371,5 +383,7 @@ $(document).ready(function() {
                 e.preventDefault();
                 $(this).focus();
         });
+
+        $('.introduction').width($('.terminal').width());
 
 });
