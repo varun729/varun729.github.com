@@ -15,8 +15,18 @@ $(document).ready(function() {
                 term.val('');
                 term.val(initial + "\n" + pre);
         };
-        var pre = "[guest@agrawal-varun.com]$ ";
-        var pre_size = pre.length;
+        var pre = "[guest@agrawal-varun.com]";
+//        var pre_size = pre.length;
+
+        /**
+         * set new prefix string
+         */
+        function pre_string(config) {
+                if (config === undefined) {
+                        return pre + "$ ";
+                }
+                pre = config;
+        };
 
         var MAX_LINES = 100;
         var content = null;
@@ -45,7 +55,7 @@ $(document).ready(function() {
         "This is help";
 
         content = welcome_msg;
-        initialize(content, pre);
+        initialize(content, pre_string());
 
         /**
          * Change the content
@@ -224,7 +234,7 @@ $(document).ready(function() {
          * When the enter key is pressed. the events to be fired
          */
         function new_line_event() {
-                $('.terminal').val(content + '\n' + pre);
+                $('.terminal').val(content + '\n' + pre_string());
                 $('.terminal').scrollTop($('.terminal')[0].scrollHeight -
                                         $('.terminal').height());
         };
@@ -237,7 +247,7 @@ $(document).ready(function() {
                         lines = lines.substring(old_lines.length + 1);
                                         // +1 because of new iine
                 }
-                return lines.substring(pre_size);
+                return lines.substring(pre_string().length);
         };
 
         /**
@@ -247,7 +257,7 @@ $(document).ready(function() {
         function typed() {
                 var old_content = content;
                 var new_content = $('.terminal').val();
-                return last_line(old_content, new_content, pre);
+                return last_line(old_content, new_content, pre_string());
         };
 
         /**
@@ -291,7 +301,7 @@ $(document).ready(function() {
          * check the cursor position for the current command being typed
          */
         function is_cursor_position_valid(cursor) {
-                if (cursor > pre_size)
+                if (cursor > pre_string().length)
                         return true;
                 return false;
         };
@@ -332,7 +342,7 @@ $(document).ready(function() {
          * update the current command from the buffer
          */
         function update_command(com) {
-                var new_content = content + "\n" + pre + com;
+                var new_content = content + "\n" + pre_string() + com;
                 $('.terminal').val('');
                 $('.terminal').val(new_content);
         };
@@ -472,6 +482,10 @@ $(document).ready(function() {
                 case ((/^cat($|\s+)/).test(command)):
                         var outfile = command.replace(/^cat($|\s+)/, "");
                         cat(outfile);
+                        break;
+                case ((/^ps($|\s+)/).test(command)):
+                        var config = command.replace(/^ps($|\s+)/, "");
+                        pre_string(config);
                         break;
                 case (command == ""):
                         break;
