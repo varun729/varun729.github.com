@@ -166,7 +166,11 @@ $(document).ready(function() {
                 }
                 var list = Array();
                 for (var i in present) {
-                        list.push(i);
+                        if (is_dir(path + i)) {
+                                list.push("(d)" + i);
+                        } else {
+                                list.push("(f)" + i);
+                        }
                 }
                 return list;
         };
