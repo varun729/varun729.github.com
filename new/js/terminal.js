@@ -1,4 +1,11 @@
 $(document).ready(function() {
+        ///**
+        // * close the current window
+        // */
+        //function close_window() {
+        //        window.close();
+        //};
+ 
         /**
          * Initialize the terminal
          */
@@ -72,10 +79,124 @@ $(document).ready(function() {
                 case "base":
                         pwd = dir;
                         pwd = pwd.trim();
-                        pwd = pwd.replace(/\/+/, "/");
-                        pwd = pwd.replace(/^(.*)\/$/, "$1");
+                        pwd += "/";
+                        pwd = pwd.replace(/\/+/g, "/");
                         break;
                 }
+        };
+
+        /**
+         * get base path
+         */
+        function get_base_path(rel_path) {
+                var base_path = pwd + rel_path;
+                return base_path;
+        };
+
+        /**
+         * path exists or not. could be file or directory
+         * @path        the path to check should be base path.
+         * return       false or the object at the path
+         */
+        function exists(path) {
+                if (path[0] != "/") {
+                        path = get_base_path(path);
+                }
+                var curr = home;
+                var s = path.split("/");
+                for (var i=0; i<s.length; i++) {
+                        if (s[i].length < 1) {
+                                continue;
+                        }
+                        if (typeof curr != "object") {
+                                return false;
+                        }
+                        curr = curr[s[i]];
+                        if (curr == null || curr === undefined) {
+                                return false;
+                        }
+                }
+                return curr;
+        };
+
+        /**
+         * return true or false for exists
+         */
+        function exists_tf(path) {
+                var a = exists(path);
+                if (a == null || a == undefined || a == false) {
+                        return false;
+                }
+                return true;
+        };
+
+        /**
+         * path in base format or relative
+         * return       true if in base format
+         *              false if in relative format, relative to pwd
+         */
+        function is_base(path) {
+                path = path.trim();
+                if (path[0] != "/") {
+                        return false;
+                }
+                if (exists_tf(path)) {
+                        return true;
+                }
+                return false;
+        };
+
+        /**
+         * get contents of the current directory
+         */
+        function sub(path) {
+                if (path === undefined) {
+                        path = pwd;
+                }
+                if (!is_base(path)) {
+                        path = get_base_path(path);
+                }
+                var dirs = path.substring(1).split("/");
+                var present = home;
+                for (var i=0; i<dirs.length; i++) {
+                        if (dirs[i].length < 1) {
+                                continue;
+                        }
+                        present = present[dirs[i]];
+                }
+                var list = Array();
+                for (var i in present) {
+                        list.push(i);
+                }
+                return list;
+        };
+
+        /**
+         * check if directory is valid
+         * TODO check if this functions properly
+         */
+        function is_dir(path) {
+                if (path[0] != "/") {
+                        path = get_base_path(path);
+                }
+                if (path == "/") {
+                        return true;
+                }
+                var dirs = path.split("/");
+                var curr = home;
+                for (var i=0; i<dirs.length; i++) {
+                        if (dirs[i] == "") {
+                                continue;
+                        }
+                        curr = curr[dirs[i]];
+                        if (curr == null || curr === undefined) {
+                                return false;
+                        }
+                        if (typeof curr != "object") {
+                                return false;
+                        }
+                }
+                return true;
         };
 
         /**
@@ -165,7 +286,7 @@ $(document).ready(function() {
         /**
          * check the cursor position for the current command being typed
          */
-        function is_valid(cursor) {
+        function is_cursor_position_valid(cursor) {
                 if (cursor > pre_size)
                         return true;
                 return false;
@@ -237,48 +358,15 @@ $(document).ready(function() {
          * list the contents of the current directory
          * TODO color code the files and directories separately
          */
-        function ls() {
-                var dirs = pwd.substring(1).split("/");
-                var present = home;
-                for (var i=0; i<dirs.length; i++) {
-                        if (dirs[i].length > 0) {
-                                present = present[dirs[i]];
-                        }
+        function ls(path, dl) {
+                if (dl === undefined) {
+                        dl = "\t";
                 }
-                var list = Array();
-                for (var i in present) {
-                        list.push(i);
+                if (path == null || path === undefined || path == "") {
+                        path = pwd;
                 }
-                modify_content("add", list.join("\t"));
-        };
-
-        /**
-         * check if directory is valid
-         * TODO check if this functions properly
-         */
-        function isdir(path) {
-                if (path[0] != "/") {
-                        return false;
-                }
-                if (path == "/") {
-                        return true;
-                }
-                var dirs = path.split("/");
-                var curr = home;
-                for (var i=0; i<dirs.length; i++) {
-                        if (dirs[i] == "") {
-                                continue;
-                        }
-                        curr = curr[dirs[i]];
-                        if (curr == null || curr === undefined) {
-                                return false;
-                        }
-                        if (typeof curr != "object") {
-                                error("Path is a file");
-                                return false;
-                        }
-                }
-                return true;
+                var list = sub(path);
+                modify_content("add", list.join(dl));
         };
 
         /**
@@ -293,7 +381,8 @@ $(document).ready(function() {
          */
         function cd(child) {
                 var new_pwd = pwd;
-                if (child == null || child === undefined || (/^\s*$/).test(child)) {
+                if (child == null || child === undefined || 
+                                        (/^\s*$/).test(child)) {
                         new_pwd = "/";
                 } else if (child.trim() == ".") {
                         // do nothing
@@ -320,17 +409,33 @@ $(document).ready(function() {
                         }
                         var children = child.split(/\s+/);
                         for (var i=0; i<children.length; i++) {
-                                if (children[i].length == 0) {
+                                if (children[i].length < 1) {
                                         continue;
                                 }
                                 new_pwd += children[i] + "/";
                         }
                 }
-                if (isdir(new_pwd)) {
+                if (is_dir(new_pwd)) {
                         modify_pwd("base", new_pwd);
                         modify_content("add", pwd);
                 } else {
                         error("Invalid path '" + new_pwd + "'");
+                }
+        };
+
+        /**
+         * see the contents of the file
+         */
+        function cat(outfile) {
+                var s = exists(outfile);
+                if (s == null || s === undefined || s == false) {
+                        error("Invalid file", "Path doesn't exist");
+                        return;
+                }
+                if (is_dir(outfile)) {
+                        ls(outfile, "\n");
+                } else {
+                        modify_content("add", s);
                 }
         };
 
@@ -349,21 +454,29 @@ $(document).ready(function() {
                 case (command == "welcome"):
                         welcome();
                         break;
-                case (command == "ls"):
-                        ls();
-                        break;
                 case (command == "pwd"):
                         echo_pwd();
                         break;
-                case ((/^cd($| )/).test(command)):
-                        var child = command.replace(/^cd($| )/, "");
+                case ((/^ls($|\s+)/).test(command)):
+                        var child = command.replace(/^ls($|\s+)/, "");
+                        ls(child);
+                        break;
+                case ((/^cd($|\s+)/).test(command)):
+                        var child = command.replace(/^cd($|\s+)/, "");
                         cd(child);
                         break;
+                case ((/^cat($|\s+)/).test(command)):
+                        var outfile = command.replace(/^cat($|\s+)/, "");
+                        cat(outfile);
+                        break;
+                //case (command == "exit"):
+                //        close_window();
+                //        break;
                 default:
                         error("Invalid command");
                 }
         };
-        
+
         $('.terminal').keydown(function(e) {
                 var input = e.which === undefined ? e.keyCode : e.which;
 
@@ -371,7 +484,7 @@ $(document).ready(function() {
                 // is to the extreme left
                 if (input == 8 || input == 37) {
                         var cursor = cursor_position();
-                        if (!is_valid(cursor)) {
+                        if (!is_cursor_position_valid(cursor)) {
                                 e.preventDefault();
                         }
                 }
@@ -407,7 +520,7 @@ $(document).ready(function() {
                 load_buffer(true);
                 new_line_event();
         });
-        
+
         /**
          * Disabling default mouse actions on the terminal.
          * TODO the terminal can't be resized because mouse events are eaten
