@@ -51,8 +51,19 @@ $(document).ready(function() {
         /**
          * TODO help contents
          */
-        var help_msg = "" +
-        "This is help";
+        var help_msg = ""+
+"Help\n"+
+"Following commands are allowed:\n"+
+" 1. ls [path]  : this will list all the contents in the working directory or\n"+
+"                 'path'\n"+
+" 2. cd [path]  : change the working directory\n"+
+" 3. pwd        : print the working directory\n"+
+" 4. cat [path] : print the contents of the file or the directory in 'path'\n"+
+"                 else working directory is taken as the 'path'\n"+
+" 5. clear      : clear the terminal\n"+
+" 6. help       : print this message\n"+
+" 7. welcome    : print the welcome message\n"+
+" 8. ps [string]: change the prefix string (string before '$')";
 
         content = welcome_msg;
         initialize(content, pre_string());
