@@ -469,6 +469,8 @@ $(document).ready(function() {
                         var outfile = command.replace(/^cat($|\s+)/, "");
                         cat(outfile);
                         break;
+                case (command == ""):
+                        break;
                 //case (command == "exit"):
                 //        close_window();
                 //        break;
