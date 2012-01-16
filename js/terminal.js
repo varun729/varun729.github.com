@@ -1,11 +1,4 @@
 $(document).ready(function() {
-        ///**
-        // * close the current window
-        // */
-        //function close_window() {
-        //        window.close();
-        //};
- 
         /**
          * Initialize the terminal
          */
@@ -16,7 +9,6 @@ $(document).ready(function() {
                 term.val(initial + "\n" + pre);
         };
         var pre = "[guest@agrawal-varun.com]";
-//        var pre_size = pre.length;
 
         /**
          * set new prefix string
@@ -500,9 +492,6 @@ $(document).ready(function() {
                         break;
                 case (command == ""):
                         break;
-                //case (command == "exit"):
-                //        close_window();
-                //        break;
                 default:
                         error("Invalid command");
                 }
