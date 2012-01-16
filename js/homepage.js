@@ -17,4 +17,6 @@ $(document).ready(function() {
                 "    " + gmail + "\n" + 
                 "    " + "<a href='http://github.com/varun729'>http://github.com/varun729</a>" + "\n";
         $('.introduction').append("\n" + contact);
+
+	$('.introduction').width($('.terminal').width());
 });

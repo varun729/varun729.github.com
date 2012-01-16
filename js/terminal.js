@@ -569,6 +569,4 @@ $(document).ready(function() {
                 $(this).focus();
         });
 
-        $('.introduction').width($('.terminal').width());
-
 });
