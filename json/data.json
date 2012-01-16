@@ -1,0 +1,24 @@
+{
+	"project":	{
+		"droidfeedback":	{
+			"Name":	"droidfeedback"
+		}
+	},
+	"hobby":	{
+	},
+	"miscellaneous":	{
+		"bio":	{
+			"Name":	"Varun Agrawal",
+			"Age":	"23 years old",
+			"Occupation":	"Software engineer",
+			"City":	"Bangalore, India",
+			"Born_in":	"Varanasi, India",
+			"Works_at":	"Strand Life Sciences",
+			"Education":	"B.Tech., Electrical Engineering, IIT Kanpur, India"
+		},
+		"link":	{
+			"GitHub":	"http://github.com/varun729",
+			"Google+":	"https://plus.google.com/100874407294566352596"
+		}
+	}
+}

@@ -30,7 +30,7 @@ $(document).ready(function() {
         /**
          * load contents from the home.json file
          */
-        $.getJSON('json/home.json', function(data) {
+        $.getJSON('json/data.json', function(data) {
                 home = data;
         });
 
