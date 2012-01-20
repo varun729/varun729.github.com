@@ -38,7 +38,8 @@ $(document).ready(function() {
          * Welcome message
          */
         var welcome_msg = "" +
-        "Welcome to the homepage of Varun Agrawal.";
+        "Welcome to the homepage of Varun Agrawal.\n" +
+        "Type 'help' to know about the several commands.";
 
         /**
          * TODO help contents
