@@ -32,6 +32,7 @@ One way is to look at each intermediate node, and find all the leaf nodes in it
 and then see if it contains given leaves. This can take O(n^2) time. For large
 trees this is not feasible, and imagine doing this in a UI application!
 </p>
+<img src="img/tree.png" />
 <p>
 This problem is called the <b>Least Common Ancestor</b> problem. And this
 write-up discusses different algorithms to find it, with decreasing order of
@@ -45,9 +46,10 @@ Sciences</b>.)
 
 <h3>Linear Tree</h3>
 <p>
-As can be seen in the <b>figure</b>, a linear tree can give solution in O(1)
+As can be seen in the figure below, a linear tree can give solution in O(1)
 time. The node which is upper in the tree, is the least ancestor.
 </p>
+<img src="img/linear_tree.png" />
 <p>
 Lets look at more complex trees.
 </p>
