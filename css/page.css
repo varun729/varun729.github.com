@@ -1,0 +1,24 @@
+.page {
+        display: block;
+}
+
+.header {
+        font-size: 40px;
+        display: block;
+        margin: 8px;
+}
+
+.content {
+        font-size: 20px;
+        display: block;
+        margin: 8px;
+}
+
+.page_links {
+        display: block;
+        margin: 8px;
+}
+
+.page_links a {
+        padding: 20px;
+}

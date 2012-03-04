@@ -1,0 +1,93 @@
+<html>
+<head>
+<link rel="stylesheet" href="../css/page.css" type="text/css" />
+<title>Least Common Ancestor in a Tree</title>
+</head>
+<body>
+
+<div class="page">
+
+<div class="header">
+[<a href="../index.html" >home</a>]
+[<a href="../algo/index.html" >algorithms</a>]
+[<a href="../blog/index.html" >blog</a>]
+</div>
+
+<hr />
+
+<div class="content">
+<h2>Least Common Ancestor in a Tree</h2>
+
+<h3>Introduction</h3>
+<p>
+Trees are one of the basic data structures used regularly. It is very
+straight-forward to design a tree, and use it. But the complexity arises when
+analysis has to be done on the tree. Trees are helpful in modeling parent child
+relationships between objects and when the distance between objects is not very
+important. But since the only information with every object is about its parent
+and its child, doing any analysis other than that requires traversal as one of
+the steps, which itself takes O(n) time. When the analysis is to be done once,
+it is not okay, but if it is to be done multiple times, it becomes costly.
+</p>
+<p>
+One of the problems which is difficult to solve directly is finding the smallest
+sub-tree containing given leaf nodes. One solution is <b>the whole tree</b>. But
+it is possible to find smaller sub-trees which also contain the given leaves.
+One way is to look at each intermediate node, and find all the leaf nodes in it
+and then see if it contains given leaves. This can take O(n^2) time. For large
+trees this is not feasible, and imagine doing this in a UI application!
+</p>
+<p>
+This problem is called the <b>Least Common Ancestor</b> problem. And this
+write-up discusses different algorithms to find it, with decreasing order of
+complexity.
+</p>
+<p>
+(This is based upon a talk by <b>Dr. Ramesh Hariharan</b> at <b>Strand Life
+Sciences</b>.)
+</p>
+
+
+<h3>Linear Tree</h3>
+<p>
+As can be seen in the <b>figure</b>, a linear tree can give solution in O(1)
+time. The node which is upper in the tree, is the least ancestor.
+</p>
+<p>
+Lets look at more complex trees.
+</p>
+
+<hr />
+
+
+<h3>Trees as arrays</h3>
+<p>
+Representing trees as arrays (so that problem can be linearized)
+</p>
+
+<h3>Finding LCA in linear time</h3>
+<p>
+Creating a data structure which takes 2*n space, O(n), by pre-computing, and
+then using it to find the LCA in O(n) time
+</p>
+
+<h3>Finding LCA in constant time</h3>
+<p>
+Creating a data structure which takes O(n*log(n)) space, but finds the LCA
+in O(1) time
+</p>
+
+<h3>Finding LCA in constant time with linear time pre-computation</h3>
+<p>
+Creating a data structure which takes O(n) space with the help of blocks and
+then finds the LCA in O(1) time.
+</p>
+
+</p>
+
+</div>
+
+</div>
+
+</body>
+</html>

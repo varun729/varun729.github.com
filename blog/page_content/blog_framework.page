@@ -1,0 +1,24 @@
+%ORDER
+1330437563
+%$
+
+%TITLE
+Blog framework
+%$
+
+%DATE
+Wednesday, Feb 29, 2012
+%$
+
+%CONTENT
+<p>
+Just finished working on this new framework to create my blog. Haven't thought
+of a name for this yet. This still needs lot of refinement, but is functional
+now and this is the first post on the blog.
+</p>
+
+<p>
+I'm now successful in creating a template for the blog which will be followed
+for all the pages and I don't need to worry about keeping all the pages in sync.
+</p>
+%$

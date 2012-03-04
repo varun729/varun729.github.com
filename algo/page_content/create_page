@@ -1,0 +1,154 @@
+#! /bin/bash
+
+DIARY_DIR=`pwd`
+
+function usage() {
+echo "Usage:"
+echo "    create_page [option]"
+echo
+echo "Options"
+echo "    -t --today     : Diary entry for today, independent of the time"
+echo "    -y --yesterday : Diary entry for yesterday, independent of the time"
+echo "    -c --compile   : Compile the logs into one pdf file"
+echo "    -h --help      : Show this message"
+echo
+}
+
+function mylog {
+f=$1
+y=$2
+datetime=`date +%A,\ %b\ %-d,\ %Y`
+seconds=`date +%s`
+touch $f
+chmod 600 $f
+
+echo "%ORDER" >> $f
+echo "$seconds" >> $f
+echo "%$" >> $f
+echo "" >> $f
+echo "%TITLE" >> $f
+echo "%<Enter title here>" >> $f
+echo "%$" >> $f
+echo "" >> $f
+echo "%DATE" >> $f
+echo "$datetime" >> $f
+echo "%$" >> $f
+echo "" >> $f
+echo "%CONTENT" >> $f
+echo "%<Enter content here, with all the html tags>" >> $f
+echo "%$" >> $f
+}
+
+
+function main {
+option="$1"
+if [[ "$option" == "-t" || "$option" == "--today" ]]
+then
+	y=""
+elif [[ "$option" == "-y" || "$option" == "--yesterday" ]]
+then
+	y=" -dyesterday"
+else
+	currenthour=`date +%H`
+	y=""
+	if [ $currenthour -le 18 ]
+	then
+		y=" -dyesterday"
+	fi
+fi
+
+d=`date $y +%Y%m%d`
+
+# create the file by adding .log to the end. The '.log' is supposed to mean that I am logging my life.
+f=$d.page.inc
+f=$DIARY_DIR/$f
+
+if [ -f $f ]
+then
+while true; do
+        read -p "Log for today already exists. Overwrite?[y/n] " yn
+        case $yn in
+                [Yy]* ) mv -b $f $f.bkp; mylog $f $y; break;;
+                [Nn]* ) break;;
+                * ) echo "Please answer yes or no.";;
+        esac
+done
+else
+mylog $f $y;
+fi
+
+# open the log for editing
+if [ -f $f ]
+then
+vim $f
+fi
+}
+
+
+function compile {
+contents=`ls $DIARY_DIR/*.page.inc | sort`
+cdir=$DIARY_DIR/compile;
+mkdir $cdir;
+
+texfile=$cdir/compile.tex;
+
+echo "\documentclass[12pt]{article}" >> $texfile
+echo "\usepackage{verbatim}" >> $texfile
+echo "" >> $texfile
+echo "%%%%% PAGE LAYOUT" >> $texfile
+echo "%" >> $texfile
+echo "%" >> $texfile
+echo "\hoffset -30pt" >> $texfile
+echo "\voffset -40pt" >> $texfile
+echo "\oddsidemargin 0pt" >> $texfile
+echo "\topmargin 0pt" >> $texfile
+echo "\headheight 30pt" >> $texfile
+echo "\headsep 20pt" >> $texfile
+echo "\textheight 650pt" >> $texfile
+echo "\textwidth 510pt" >> $texfile
+echo "\marginparsep 0pt" >> $texfile
+echo "\marginparwidth 0pt" >> $texfile
+echo "\footskip 0pt" >> $texfile
+echo "" >> $texfile
+echo "\pagestyle{empty}" >> $texfile
+echo "" >> $texfile
+echo "" >> $texfile
+echo "\begin{document}" >> $texfile
+echo "" >> $texfile
+echo "\begin{titlepage}" >> $texfile
+echo "\vspace*{\fill}" >> $texfile
+echo "\begin{center}" >> $texfile
+echo "{\Huge Diary}\\\\[0.5cm]" >> $texfile
+echo "{\Large Varun Agrawal}\\\\[0.4cm]" >> $texfile
+echo "\end{center}" >> $texfile
+echo "\vspace*{\fill}" >> $texfile
+echo "\end{titlepage}" >> $texfile
+echo "\newpage" >> $texfile
+echo "" >> $texfile
+for i in $contents
+do
+echo "\verbatiminput{$i}" >> $texfile
+echo "\newpage" >> $texfile
+done
+echo "" >> $texfile
+echo "\end{document}" >> $texfile
+
+pdflatex -output-directory $DIARY_DIR/compile $texfile;
+mv -b $cdir/compile.pdf $DIARY_DIR/diary.pdf;
+rm -rf $cdir;
+
+}
+
+option="$1"
+if [[ -n "$option" && -z `echo "$option" | grep '^\(-[tyhc]\|--yesterday\|--today\|--help\|--compile\)$'` ]]
+then
+usage
+elif [[ $option == "-h" || $option == "--help" ]]
+then
+usage
+elif [[ $option == "-c" || $option == "--compile" ]]
+then
+compile "$@"
+else
+main "$@"
+fi
