@@ -22,6 +22,7 @@
 <hr />
 
 <div class="content">
+<i>%[date]</i>
 <h2>%[title]</h2>
 %[content]
 </div>

@@ -42,6 +42,7 @@ def get_page_data(page):
         lines = fr.readlines()
         ws_pattern = re.compile(r'\s+')
         title = ""
+        date = ""
         content = ""
         i = 0
         while i < len(lines):
@@ -55,6 +56,15 @@ def get_page_data(page):
                                         continue
                                 title += line + "\n"
                         title = re.sub(ws_pattern, ' ', title)
+                # search date
+                elif line.find("%DATE") >= 0:
+                        while line.find("%$") < 0:
+                                i += 1
+                                line = lines[i].strip()
+                                if line and line[0] == "%":
+                                        continue
+                                date += line + "\n"
+                        date = re.sub(ws_pattern, ' ', date)
                 # search content
                 elif line.find("%CONTENT") >= 0:
                         while line.find("%$") < 0:
@@ -72,7 +82,7 @@ def get_page_data(page):
         filename = filename + ".html"
         href = prefix + filename
         return {"href":href, "title":title, "content":content,
-        "filename":filename}
+        "date":date, "filename":filename}
 
 def get_variable(line, alt_data):
         match = RE_VAR.search(line)
