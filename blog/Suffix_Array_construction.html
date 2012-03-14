@@ -80,6 +80,14 @@ human genome, then we can use blockwise sorting.
 Sorting an almost sorted suffix array, is a problem to which I currently have no
 idea how to solve.
 </p>
+<p>
+One thing which can be looked into is, how much different is the BWT constructed
+from the inexact suffix array. If the BWT is reasonable and is erroneous in only
+a small portion, then the speed attained from this algorithm could be worth
+looking into. To compare this, construct the BWT from the inexact suffix array
+and then reconstruct the text from this BWT. Compare this text with the original
+text. Find the number of differences.
+</p>
 
 </div>
 
