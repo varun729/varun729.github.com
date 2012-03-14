@@ -1,20 +1,25 @@
 #lang racket
 
 ;;; Tree nodes
-(define (make-node value children special)
-  (cons special (cons value children)))
+(define (make-node value children special color)
+  (cons special (cons color (cons value children))))
 
 (define (is-node-special? node)
   (car node))
 
+(define (node-color? node)
+  (if (null? (cadr node))
+      "black"
+      (cadr node)))
+
 (define (get-node-value node)
-  (cadr node))
+  (caddr node))
 
 (define (get-node-children node)
-  (cddr node))
+  (cdddr node))
 
 (define (modify-node-value node value)
-  (make-node value (get-node-children node) (is-node-special? node)))
+  (make-node value (get-node-children node) (is-node-special? node) (node-color? node)))
 
 (define (get-node-child-count node)
   (length (get-node-children node)))
@@ -37,13 +42,15 @@
 (define (add-child node child)
   (make-node (get-node-value node) 
              (cons child (get-node-children node))
-             (is-node-special? node)))
+             (is-node-special? node)
+             (node-color? node)))
 
 (define (remove-child node value)
   ; Remove all children which have the value 'value'
   (make-node (get-node-value node)
              (filter-node value (get-node-children node))
-             (is-node-special? node)))
+             (is-node-special? node)
+             (node-color? node)))
 ;;; Tree
 (define (make-tree tree)
   (cond ((not (pair? tree)) '())
@@ -52,17 +59,21 @@
            (if (equal? '* (car tree))
                true
                false))
+         (define color
+           (if special
+               (cadr tree)
+               null))
          (define value-tmp
            (if special
-               cadr
+               caddr
                car))
          (define children-tmp
            (if special
-               cddr
+               cdddr
                cdr))
          (let ((value (value-tmp tree))
                (children (map make-tree (children-tmp tree))))
-           (make-node value children special)))))
+           (make-node value children special color)))))
 
 ;;;
 (provide (all-defined-out))
