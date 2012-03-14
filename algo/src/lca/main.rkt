@@ -32,17 +32,25 @@
 
 
 ;;; user-controlled part
-(define (draw-tree-list-gif name tree-list)
-  (define (show-tree-fu lis n)
-    (cond ((null? lis) null)
-          (else (show-tree (car lis) (get-file-name n "png"))
-                (show-tree-fu (cdr lis) (+ n 1)))))
-  (show-tree-fu tree-list 1)
-  (create-tree-gif 100 name (map (lambda (y) (get-file-name y "png"))
-                                 (build-list 
-                                  (length tree-list)
-                                  (lambda (y)
-                                    (+ 1 (values y)))))))
+(define (draw-tree-list-gif name tree-list #:force [force false])
+  (let ((filename (get-file-name name "gif")))
+    (cond ((and (not force) (file-exists? filename))
+           (print (string-append filename " already exists."))
+           (newline))
+          (else
+           (if (file-exists? filename)
+               (delete-file filename)
+               null)
+           (define (show-tree-fu lis n)
+             (cond ((null? lis) null)
+                   (else (show-tree (car lis) (get-file-name n "png"))
+                         (show-tree-fu (cdr lis) (+ n 1)))))
+           (show-tree-fu tree-list 1)
+           (create-tree-gif 100 name (map (lambda (y) (get-file-name y "png"))
+                                          (build-list 
+                                           (length tree-list)
+                                           (lambda (y)
+                                             (+ 1 (values y))))))))))
 
 
 
@@ -55,3 +63,9 @@
                      '(1(2(3(4(5(6(7)))))))
                      '(1(2(3(* "blue" 4(5(* "blue" 6(7)))))))
                      '(1(2(* "red" 3(* "blue" 4(5(* "blue" 6(7)))))))))
+
+;;; simple tree
+(draw-tree-list-gif "simple"
+                    (list
+                     '(1(2(3(4)(5)))(6(7(8)(9)))))
+                    #:force true)
