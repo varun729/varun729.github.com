@@ -69,16 +69,16 @@
 (define (y-arg point)
   (cdr point))
 
-(define (draw-point point value node-color dc)
+(define (draw-point point value node-color radius dc)
   (let ((x (x-arg point))
         (y (y-arg point)))
     (send dc set-smoothing 'aligned)
     (send dc set-pen "white" 1 'transparent)
     (send dc set-brush node-color 'solid)
-    (send dc draw-ellipse (- x 5) (- y 5) 10 10)
+    (send dc draw-ellipse (- x radius) (- y radius) (* radius 2) (* radius 2))
     (if (null? value)
         null
-        (send dc draw-text (convert-string value) (+ x 10) (- y 10)))))
+        (send dc draw-text (convert-string value) (+ x (* radius 2)) (- y radius)))))
 
 (define (draw-edge p1 p2 dc)
   (let ((x1 (x-arg p1))
@@ -100,7 +100,7 @@
                     (draw-edge p q dc)))
                 c-points))))
 
-(define (draw-points tree-coords dc show-value)
+(define (draw-points tree-coords dc radius show-value)
   (let ((x (get-abs-x tree-coords))
         (y (get-abs-y tree-coords))
         (value (if show-value (get-tp-value tree-coords) null))
@@ -108,29 +108,15 @@
         (c-points (get-children-points tree-coords)))
     (let ((p (make-point x y)))
       (for-each (lambda (a-coord)
-                  (draw-coords a-coord dc show-value))
+                  (draw-points a-coord dc radius show-value))
                 c-points)
-      (draw-point p value node-color dc))))
+      (draw-point p value node-color radius dc))))
 
-(define (draw-coords tree-coords dc show-value)
+(define (draw-coords tree-coords dc radius show-value)
   (draw-edges tree-coords dc)
-  (draw-points tree-coords dc show-value))
-;(define (draw-coords tree-coords dc show-value)
-;  (let ((x (get-abs-x tree-coords))
-;        (y (get-abs-y tree-coords))
-;        (value (if show-value (get-tp-value tree-coords) null))
-;        (special (is-tp-special? tree-coords))
-;        (node-color (get-tp-color tree-coords))
-;        (c-points (get-children-points tree-coords)))
-;    (let ((p (make-point x y)))
-;      (for-each (lambda (a-coord)
-;                  (draw-coords a-coord dc show-value)
-;                  (let ((q (make-point (get-abs-x a-coord) (get-abs-y a-coord))))
-;                    (draw-edge p q dc)))
-;                c-points)
-;      (draw-point p value node-color dc))))
+  (draw-points tree-coords dc radius show-value))
 
-(define (paint-tree-graphics tree units dc show-value)
+(define (paint-tree-graphics tree units radius dc show-value)
   (define (get-coordinates origin-x origin-y sub-tree)
     (cond ((has-children? sub-tree)
            (define (get-sub-tree-points x-start c)
@@ -155,29 +141,26 @@
            (make-tree-point origin-x origin-y 0 0 units (get-node-value sub-tree) 
                             (is-node-special? sub-tree) (node-color? sub-tree) null))))
   (define tree-coords (get-coordinates 1 1 tree))
-  (draw-coords tree-coords dc show-value))
+  (draw-coords tree-coords dc radius show-value))
 
-(define (paint-tree tree units show-value target-func)
+(define (paint-tree tree units radius show-value target-func)
   (define width (units (+ 2 (get-tree-width tree))))
   (define height (units (+ 2 (get-tree-height tree))))
   (define target (make-bitmap width height))
   (define dc (new bitmap-dc% [bitmap target]))
-  (paint-tree-graphics tree units dc show-value)
+  (paint-tree-graphics tree units radius dc show-value)
   (target-func target))
 
-(define (draw-tree tree units show-value)
+(define (draw-tree tree units radius show-value #:filename [filename null])
   (paint-tree tree
               units
+              radius
               show-value
               (lambda (target)
-                (make-object image-snip% target))))
+                (if (null? filename)
+                    (make-object image-snip% target)
+                    (send target save-file filename 'png)))))
 
-(define (save-tree tree units show-value filename)
-  (paint-tree tree
-              units
-              show-value
-              (lambda (target)
-                (send target save-file filename 'png))))
 
 ;;;
 (provide (all-defined-out))

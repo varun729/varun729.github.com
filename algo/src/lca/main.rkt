@@ -5,14 +5,15 @@
 (require "tree.rkt")
 (require "draw_tree.rkt")
 
-(define (units x) (* 70 x))
+(define (units x) (* 60 x))
+(define radius 10)
 
 (define (show-tree t f)
   (define tree (make-tree t))
   (define show-value true)
   (if (null? f)
-      (draw-tree tree units show-value)
-      (save-tree tree units show-value f)))
+      (draw-tree tree units radius show-value)
+      (draw-tree tree units radius show-value #:filename f)))
 
 ;;; file name
 (define (get-file-name s type)
@@ -62,10 +63,11 @@
                     (list
                      '(1(2(3(4(5(6(7)))))))
                      '(1(2(3(* "blue" 4(5(* "blue" 6(7)))))))
-                     '(1(2(* "red" 3(* "blue" 4(5(* "blue" 6(7)))))))))
+                     '(1(2(* "red" 3(* "blue" 4(5(* "blue" 6(7))))))))
+                    #:force true)
 
 ;;; simple tree
 (draw-tree-list-gif "simple"
                     (list
-                     '(1(2(3(4)(5)))(6(7(8)(9)))))
+                     '(1(2(3(4)(5))(6))(7(8)(9))))
                     #:force true)
