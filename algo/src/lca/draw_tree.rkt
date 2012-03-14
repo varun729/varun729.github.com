@@ -32,9 +32,10 @@
 (define get-tp-width (tree-point-methods 4))
 (define get-tp-height (tree-point-methods 5))
 (define get-tp-value (tree-point-methods 6))
-(define get-children-points (tree-point-methods 7))
+(define is-tp-special? (tree-point-methods 7))
+(define get-children-points (tree-point-methods 8))
 
-(define (make-tree-point origin-x origin-y width height units value children-points)
+(define (make-tree-point origin-x origin-y width height units value special children-points)
   ;define make-tree-point
   (if (null? children-points)
       (list (units origin-x) ; origin 
@@ -44,6 +45,7 @@
             (units width)    ; width
             (units height)   ; height
             value
+            special
             children-points)
       (list (units origin-x)
             (units origin-y)
@@ -52,6 +54,7 @@
             (units width)
             (units height)
             value
+            special
             children-points)))
 
 (define (make-point x y)
@@ -63,12 +66,15 @@
 (define (y-arg point)
   (cdr point))
 
-(define (draw-point point value dc)
+(define (draw-point point value special dc)
   (let ((x (x-arg point))
-        (y (y-arg point)))
+        (y (y-arg point))
+        (node-color (if special
+                        "red"
+                        "black")))
     (send dc set-smoothing 'aligned)
     (send dc set-pen "white" 1 'transparent)
-    (send dc set-brush "black" 'solid)
+    (send dc set-brush node-color 'solid)
     (send dc draw-ellipse (- x 5) (- y 5) 10 10)
     (if (null? value)
         null
@@ -87,14 +93,15 @@
   (let ((x (get-abs-x tree-coords))
         (y (get-abs-y tree-coords))
         (value (if show-value (get-tp-value tree-coords) null))
+        (special (is-tp-special? tree-coords))
         (c-points (get-children-points tree-coords)))
     (let ((p (make-point x y)))
-      (draw-point p value dc)
       (for-each (lambda (a-coord)
                   (draw-coords a-coord dc show-value)
                   (let ((q (make-point (get-abs-x a-coord) (get-abs-y a-coord))))
                     (draw-edge p q dc)))
-                c-points))))
+                c-points)
+      (draw-point p value special dc))))
 
 (define (paint-tree-graphics tree units dc show-value)
   (define (get-coordinates origin-x origin-y sub-tree)
@@ -114,9 +121,10 @@
                             (get-tree-height sub-tree)
                             units
                             (get-node-value sub-tree)
+                            (is-node-special? sub-tree)
                             sub-tree-points))
           (else
-           (make-tree-point origin-x origin-y 0 0 units (get-node-value sub-tree) null))))
+           (make-tree-point origin-x origin-y 0 0 units (get-node-value sub-tree) (is-node-special? sub-tree) null))))
   (define tree-coords (get-coordinates 1 1 tree))
   (draw-coords tree-coords dc show-value))
 
