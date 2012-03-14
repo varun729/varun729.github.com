@@ -39,7 +39,7 @@ large input. Here I am going to discuss about the general idea of the algorithm.
 <hr/>
 <h3>Idea</h3>
 <p>
-Constructin the suffix array requires sorting all the suffixes of the given
+Constructing the suffix array requires sorting all the suffixes of the given
 input string. Say, if we are able to sort the suffixes somehow such that only a
 few indices are left unsorted and they are close to their original location.
 Thus the problem now is to place those suffixes in their correct position, and
