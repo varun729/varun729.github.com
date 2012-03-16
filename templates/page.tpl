@@ -42,6 +42,8 @@ your users are sharing">-->
 <div class="content">
 <i>%[date]</i>
 <h2>%[title]</h2>
+%[content]
+
 <!-- g+ button -->
 <g:plusone></g:plusone>
 <!-- Tweet button -->
@@ -49,7 +51,6 @@ your users are sharing">-->
 <script>!function(d,s,id){var
 js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
-%[content]
 </div>
 
 </div>
