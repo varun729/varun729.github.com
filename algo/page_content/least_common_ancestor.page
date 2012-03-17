@@ -61,7 +61,28 @@ Lets look at more complex trees.
 
 <h3>Trees as arrays</h3>
 <p>
-Representing trees as arrays (so that problem can be linearized)
+As we just saw that, with a linear tree the problem becomes very simplified.
+Searching for a node in a linear data structure is much more simpler than in a
+linked list. Trees are usually stored as a linked list, and although finding the
+least common ancestor using this data structure is possible it takes more than
+linear time.
+</p>
+<p>
+<img src="img/tree/simple.png" />
+<img src="img/tree/simple.gif" />
+</p>
+<p>
+In order to simplify the search of the LCA, we can do some pre-processing which
+will then make the runtime much faster. The data structure which we will use is
+as described below:
+</p>
+<p>
+We traverse the tree as is shown in the array below. The data structure
+remembers the rank of the node during traversal. Rank is the distance from the
+topmost node.<br />
+Traversal -> [1 2 3 4 3 5 3 2 1 6 7 6 8 6 1]<br />
+Data structure -> [0 1 2 3 2 3 2 1 0 1 2 1 2 1 0]<br />
+<img src="img/tree/simple-traverse.gif" />
 </p>
 
 <h3>Finding LCA in linear time</h3>

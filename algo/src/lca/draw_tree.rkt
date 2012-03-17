@@ -1,6 +1,5 @@
 #lang racket
 (require racket/gui)
-(require racket/include)
 (require "tree.rkt")
 (require "util.rkt")
 
@@ -161,6 +160,31 @@
                     (make-object image-snip% target)
                     (send target save-file filename 'png)))))
 
+;;; draw array numbers
+(define (paint-array-graphics array units dc)
+  (define (append-all arr)
+    (if (null? arr)
+        ""
+        (string-append (number->string (car arr)) " " (append-all (cdr arr)))))
+  (define str (append-all array))
+  (send dc set-font (make-object font% 14 'modern 'normal))
+  (send dc set-text-foreground "black")
+  (send dc draw-rectangle 0 0 (* 10 (length str)) 20)
+  (send dc draw-text str 2 2))
+
+(define (paint-array array units target-func)
+  (define width (units (length array)))
+  (define height (units 1))
+  (define target (make-bitmap width height))
+  (define dc (new bitmap-dc% [bitmap target]))
+  (paint-array-graphics array units dc)
+  (target-func target))
+
+(define (draw-array array units #:filename [filename null])
+  (paint-array array units (lambda (target)
+                             (if (null? filename)
+                                 (make-object image-snip% target)
+                                 (send target save-file filename 'png)))))
 
 ;;;
 (provide (all-defined-out))

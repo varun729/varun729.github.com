@@ -51,6 +51,7 @@
              (filter-node value (get-node-children node))
              (is-node-special? node)
              (node-color? node)))
+
 ;;; Tree
 (define (make-tree tree)
   (cond ((not (pair? tree)) '())
