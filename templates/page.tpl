@@ -15,7 +15,7 @@
 <!--<meta itemprop="description" content="This would be a description of the content
 your users are sharing">-->
 
-<!-- Place this render call where appropriate -->
+<!-- Place this render call where appropriate 
 <script type="text/javascript">
   (function() {
     var po = document.createElement('script'); po.type = 'text/javascript';
@@ -25,7 +25,7 @@ your users are sharing">-->
     s.parentNode.insertBefore(po, s);
   })();
 </script>
-
+-->
 </head>
 <body>
 
@@ -44,12 +44,16 @@ your users are sharing">-->
 <h2>%[title]</h2>
 %[content]
 
-<!-- g+ button -->
+<!-- g+ button 
 <g:plusone></g:plusone>
-<!-- Tweet button -->
+-->
+<!-- Tweet button 
 <a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+-->
+<!--
 <script>!function(d,s,id){var
 js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+-->
 
 </div>
 
