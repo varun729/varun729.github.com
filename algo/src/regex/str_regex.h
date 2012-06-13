@@ -5,6 +5,7 @@
  */
 struct reg_exp {
         char *pattern;
+        char *tokens[];
 };
 
 /**

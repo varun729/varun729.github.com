@@ -57,6 +57,25 @@ regex expression</li>
 </ul>
 </p>
 
+<p>
+<b>Scoping:</b>
+</p>
+<p>
+To identify a regular expression an object will be created which contains the
+basic information regarding the pattern which is to be searched. The pattern
+object will have the following properties:
+<ol>
+<li>The pattern string</li>
+<li>List of tokens in the pattern. Tokens are the sequence of characters
+in the pattern (including spaces) separated by special pattern such as:
+'.*' or '.+' .</li>
+<li>'^' and '$' are used to signify start and end of the search string.
+This is a special part of the pattern, which should be kept as a
+attribute to the pattern.</li>
+<li>Other features later...</li>
+</ol>
+</p>
+
 
 <!-- g+ button
 <g:plusone></g:plusone>
