@@ -35,6 +35,7 @@ your users are sharing">-->
 [<a href="%[home_page_url]" >home</a>]
 [<a href="%[algo_url]" >algorithms</a>]
 [<a href="%[blog_url]" >blog</a>]
+[<a href="%[projects_url]" >projects</a>]
 </div>
 
 <hr />
