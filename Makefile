@@ -1,9 +1,15 @@
 
+# To add a new directory:
+# 1. Add a variable below storing the name of the directory
+# 2. Make a copy of the the new_dir folder
+# 3. Add a link to it in the index.html of the homepage
 
+# INITIALIZING SOME VALUES FOR THE BLOG
 
 PAGE_TITLE = "Varun Agrawal"
 ALGO_DIR = algo
 BLOG_DIR = blog
+PROJECTS_DIR = projects
 TEMPLATES_DIR = templates
 
 
