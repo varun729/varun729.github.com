@@ -1,7 +1,0 @@
-#lang racket
-
-;;; Least common ancestor
-(define (find-lca tree key-nodes)
-  ;; key-nodes is the list of values of nodes for which LCA is to be found
-  (define linear-tree (get-euler-tour tree))
-  (print linear-tree))
