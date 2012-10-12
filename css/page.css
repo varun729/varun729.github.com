@@ -22,3 +22,8 @@
 .page_links a {
         padding: 20px;
 }
+
+.code {
+        font-size: 100px;
+        margin: 20px;
+}
