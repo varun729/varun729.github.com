@@ -24,9 +24,29 @@ char q[0] = 'H';    // this will run fine
 char p[0] = 'H';    // segmentation fault
 </pre>
 Why do I get segmentation fault when I try to modify a string which was 
-initialized to a pointer?
+initialized to a pointer?<br/>
+<b>Answer:</b> <a href="http://stackoverflow.com/a/752425">See this link.</a>
+<br/>
+<p>
+The two methods of initializing strings is not the same. The difference lies 
+in the memory location where the string is stored. When you create an array, 
+then you tell C that you want to create an array and fill it with the 
+corresponding string. But, when you create a pointer, you just say that "I have 
+a string, and I want to put its address in the pointer". The string here is a 
+constant value which will be stored by the compiler in the program's data 
+segment. This is a read-only portion of the memory, and thus you get 
+<b>segmentation fault</b> when you try to modify the string.
+</p>
+<p>Try running the following code, and see the huge difference between the 
+addresses of the two string containers (pointer and array).
+</p>
+<pre class="code">
+char q[] = "hello world";
+char *p = "hello world";
 
-
+printf("%x\n", &q); // address lies high in the memory
+printf("%x\n", p);  // address lies in the lower part of memory
+</pre>
 
 </li>
 
