@@ -1,12 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<sync revision="15" server-id="08e9c773-835d-4d3a-a9f2-ecbf26fcd675">
+<sync revision="11" server-id="08e9c773-835d-4d3a-a9f2-ecbf26fcd675">
   <note id="026adf56-c576-4542-b0ed-0d360ef59742" rev="0" />
   <note id="615784bc-6b94-49d4-81b6-91a46ead1df0" rev="0" />
   <note id="e73bd3cc-02f6-40e7-8ffc-34fb974dfaa5" rev="0" />
   <note id="33dd47eb-e76b-4327-a845-918af94ffa8b" rev="9" />
   <note id="265e7ead-eaf8-476e-b7f0-095fa542cddb" rev="9" />
-  <note id="3c4c8a64-c98b-446e-8382-6ecf8cf45744" rev="13" />
-  <note id="2102a715-1760-4955-9ef7-421ac9aae704" rev="14" />
-  <note id="0a9cbf44-43a0-4342-a200-daf26eb3260a" rev="14" />
-  <note id="8c35d2b1-65fa-4b91-8999-85d7b65bd48c" rev="15" />
+  <note id="0a9cbf44-43a0-4342-a200-daf26eb3260a" rev="10" />
+  <note id="3c4c8a64-c98b-446e-8382-6ecf8cf45744" rev="11" />
 </sync>

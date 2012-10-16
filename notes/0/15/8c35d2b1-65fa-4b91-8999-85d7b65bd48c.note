@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Conclusion</title>
+  <text xml:space="preserve"><note-content version="0.1">Conclusion
+
+// Slide 6
+We have seen how pointers can be used to change value of a variable. Also we have seen an example where pointers were necessary to do the task at hand.
+
+Pointers is a concept which is integral part of programming. Also before I stop, lets talk about the game of Treasure Hunt. You start with a base hint, in which you have the hint to the next chit
+
+paper(hint1) -&gt; paper(hint2) -&gt; paper(hint3) -&gt; ... -&gt; paper(hintN) -&gt; TREASURE.
+
+Thank you for your time.
+
+I will be happy to answer any questions now.</note-content></text>
+  <last-change-date>2012-10-16T01:51:46.0511130-04:00</last-change-date>
+  <last-metadata-change-date>2012-10-16T01:51:46.0524570-04:00</last-metadata-change-date>
+  <create-date>2012-10-16T01:45:18.0305050-04:00</create-date>
+  <cursor-position>392</cursor-position>
+  <selection-bound-position>520</selection-bound-position>
+  <width>450</width>
+  <height>360</height>
+  <x>585</x>
+  <y>275</y>
+  <open-on-startup>False</open-on-startup>
+</note>

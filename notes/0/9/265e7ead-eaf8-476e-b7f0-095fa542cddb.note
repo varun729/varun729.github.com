@@ -4,14 +4,15 @@
   <text xml:space="preserve"><note-content version="0.1">Monday Oct 15
 
 <strikethrough>1. Make the <link:internal>english presentation</link:internal></strikethrough><strikethrough> outline</strikethrough>
-2. prepare for Algorithms exam
+<strikethrough>2. <link:internal>prepare for Algorithms exam</link:internal></strikethrough>
 3. read OS paper
-4. do OS lab</note-content></text>
-  <last-change-date>2012-10-15T12:56:18.0491830-04:00</last-change-date>
-  <last-metadata-change-date>2012-10-15T12:56:18.0491830-04:00</last-metadata-change-date>
+4. do OS lab
+<strikethrough>5. wrote an awesome script to send gradesheets to students</strikethrough></note-content></text>
+  <last-change-date>2012-10-15T22:45:48.2706020-04:00</last-change-date>
+  <last-metadata-change-date>2012-10-15T22:45:48.2706020-04:00</last-metadata-change-date>
   <create-date>2012-10-15T11:34:53.3170730-04:00</create-date>
-  <cursor-position>116</cursor-position>
-  <selection-bound-position>116</selection-bound-position>
+  <cursor-position>75</cursor-position>
+  <selection-bound-position>75</selection-bound-position>
   <width>450</width>
   <height>360</height>
   <x>839</x>

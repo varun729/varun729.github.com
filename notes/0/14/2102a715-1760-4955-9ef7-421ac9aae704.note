@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<note version="0.3" xmlns:link="http://beatniksoftware.com/tomboy/link" xmlns:size="http://beatniksoftware.com/tomboy/size" xmlns="http://beatniksoftware.com/tomboy">
+  <title>Usage</title>
+  <text xml:space="preserve"><note-content version="0.1">Usage
+
+// Slide 4
+In programming you write function to get some functionality which is required again and again.
+Say you want to find the sum:
+
+int sum;
+int a;
+int b;
+a = 23;
+b = 34;
+sum = findSum(a, b);
+// sum will have the value of 57
+
+// Slide 5
+What if we want to swap the values of 2 variables
+swap(a,b);
+
+When we say swap(a,b), the function swap gets the values in the variable a and b. It can not do anything to change the values inside these variables. If we could instead do something like
+swap(&amp;a, &amp;b);
+Here we are giving the address of a and address of b. Now the function has the address of the variables. It can use the address to interchange the values at those addresses. So we have implemented a task which was difficult to do without using pointers.</note-content></text>
+  <last-change-date>2012-10-16T01:44:46.1963950-04:00</last-change-date>
+  <last-metadata-change-date>2012-10-16T01:44:46.2004360-04:00</last-metadata-change-date>
+  <create-date>2012-10-16T01:30:08.5083370-04:00</create-date>
+  <cursor-position>355</cursor-position>
+  <selection-bound-position>355</selection-bound-position>
+  <width>450</width>
+  <height>360</height>
+  <x>751</x>
+  <y>156</y>
+  <open-on-startup>False</open-on-startup>
+</note>
