@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<svg width="640" height="480" xmlns="http://www.w3.org/2000/svg">
+ <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
+ <g>
+  <title>Layer 1</title>
+  <path id="svg_1" d="m134.873047,48.072472c0,6.627518 -24.177368,12.000401 -54.001961,12.000401m54.001961,-12.000401l0,0c0,6.627518 -24.177368,12.000401 -54.001961,12.000401c-29.824532,0 -54.001949,-5.372883 -54.001949,-12.000401m0,0l0,0c0,-6.627865 24.177418,-12.000198 54.001949,-12.000198c29.824593,0 54.001961,5.372334 54.001961,12.000198l0,48.002159c0,6.627525 -24.177368,11.999939 -54.001961,11.999939c-29.824532,0 -54.001949,-5.372414 -54.001949,-11.999939l0,-48.002159z" stroke-width="5" stroke="#000000" fill="#FF0000"/>
+  <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_2" y="86" x="82" stroke-width="0" stroke="#000000" fill="#000000">Repo</text>
+  <ellipse ry="26" rx="45" id="svg_3" cy="57" cx="308" stroke-width="5" stroke="#000000" fill="#ff7f00"/>
+  <ellipse id="svg_4" ry="26" rx="45" cy="173" cx="233" stroke-width="5" stroke="#000000" fill="#ff7f00"/>
+  <text style="cursor: move;" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_5" y="51" x="204" stroke-width="0" stroke="#000000" fill="#000000">/</text>
+  <line id="svg_7" y2="59" x2="249.000004" y1="58" x1="162.000004" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_8" y2="57" x2="250" y1="42" x1="229" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_9" y2="75" x2="229" y1="57" x1="249" stroke-width="5" stroke="#000000" fill="none"/>
+  <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_10" y="61" x="307" stroke-width="0" stroke="#000000" fill="#000000">tree</text>
+  <ellipse id="svg_11" ry="26" rx="45" cy="175" cx="407" stroke-width="5" stroke="#000000" fill="#ff7f00"/>
+  <text id="svg_12" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="179" x="406" stroke-width="0" stroke="#000000" fill="#000000">tree</text>
+  <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_15" y="180" x="232" stroke-width="0" stroke="#000000" fill="#000000">blob</text>
+  <ellipse id="svg_16" ry="26" rx="45" cy="300" cx="341" stroke-width="5" stroke="#000000" fill="#ff7f00"/>
+  <text id="svg_17" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="307" x="340" stroke-width="0" stroke="#000000" fill="#000000">blob</text>
+  <line transform="rotate(118.421, 275.866, 114.345)" id="svg_22" y2="114.845181" x2="316.321587" y1="113.845181" x1="235.410686" stroke-width="5" stroke="#000000" fill="none"/>
+  <line transform="rotate(51.8428, 255, 137)" id="svg_23" y2="144.5" x2="265.5" y1="129.5" x1="244.5" stroke-width="5" stroke="#000000" fill="none"/>
+  <line transform="rotate(9.3236, 267.5, 142.5)" id="svg_24" y2="151.5" x2="257.5" y1="133.5" x1="277.5" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_25" transform="rotate(118.421, 378.882, 238.898)" y2="239.397915" x2="419.337212" y1="238.397915" x1="338.426311" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_26" transform="rotate(51.8428, 358.016, 261.553)" y2="269.052734" x2="368.515625" y1="254.052734" x1="347.515625" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_27" transform="rotate(9.3236, 370.516, 267.053)" y2="276.052734" x2="360.515625" y1="258.052734" x1="380.515625" stroke-width="5" stroke="#000000" fill="none"/>
+  <ellipse id="svg_28" ry="26" rx="45" cy="302.5" cx="506" stroke-width="5" stroke="#000000" fill="#ff7f00"/>
+  <text id="svg_29" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="306.5" x="505" stroke-width="0" stroke="#000000" fill="#000000">tree</text>
+  <ellipse id="svg_30" ry="26" rx="45" cy="427.5" cx="440" stroke-width="5" stroke="#000000" fill="#ff7f00"/>
+  <text id="svg_31" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="434.5" x="439" stroke-width="0" stroke="#000000" fill="#000000">blob</text>
+  <line id="svg_32" transform="rotate(118.421, 477.882, 366.398)" y2="366.897915" x2="518.337212" y1="365.897915" x1="437.426311" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_33" transform="rotate(51.8428, 457.016, 389.053)" y2="396.552734" x2="467.515625" y1="381.552734" x1="446.515625" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_34" transform="rotate(9.3236, 469.516, 394.553)" y2="403.552734" x2="459.515625" y1="385.552734" x1="479.515625" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_35" transform="rotate(55.5959, 360.881, 115.898)" y2="116.399868" x2="401.335259" y1="115.399868" x1="320.424358" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_36" transform="rotate(-23.0598, 369.016, 145.555)" y2="153.054688" x2="379.513672" y1="138.054688" x1="358.513672" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_37" transform="rotate(-45.2982, 383.516, 134.055)" y2="143.054688" x2="373.513672" y1="125.054688" x1="393.513672" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_38" transform="rotate(55.5959, 454.588, 240)" y2="240.501431" x2="495.04229" y1="239.501431" x1="414.131389" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_39" transform="rotate(-23.0598, 462.723, 269.657)" y2="277.15625" x2="473.220703" y1="262.15625" x1="452.220703" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_40" transform="rotate(-45.2982, 477.223, 258.157)" y2="267.15625" x2="467.220703" y1="249.15625" x1="487.220703" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_41" transform="rotate(55.5959, 533.588, 365)" y2="365.501431" x2="574.04229" y1="364.501431" x1="493.131389" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_42" transform="rotate(-23.0598, 541.723, 394.657)" y2="402.15625" x2="552.220703" y1="387.15625" x1="531.220703" stroke-width="5" stroke="#000000" fill="none"/>
+  <line id="svg_43" transform="rotate(-45.2982, 556.223, 383.157)" y2="392.15625" x2="546.220703" y1="374.15625" x1="566.220703" stroke-width="5" stroke="#000000" fill="none"/>
+  <ellipse id="svg_47" ry="26" rx="45" cy="427" cx="575" stroke-width="5" stroke="#000000" fill="#ff7f00"/>
+  <text id="svg_48" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="434" x="574" stroke-width="0" stroke="#000000" fill="#000000">blob</text>
+  <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_49" y="114" x="252" stroke-width="0" stroke="#000000" fill="#000000">file1</text>
+  <text xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" id="svg_50" y="105" x="376" stroke-width="0" stroke="#000000" fill="#000000">dir1</text>
+  <text style="cursor: move;" id="svg_51" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="231" x="471.101563" stroke-width="0" stroke="#000000" fill="#000000">dir2</text>
+  <text style="cursor: move;" id="svg_52" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="238" x="350.037109" stroke-width="0" stroke="#000000" fill="#000000">file2</text>
+  <text style="cursor: move;" id="svg_53" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="364" x="451.037109" stroke-width="0" stroke="#000000" fill="#000000">file3</text>
+  <text style="cursor: move;" id="svg_54" xml:space="preserve" text-anchor="middle" font-family="serif" font-size="24" y="359" x="559.037109" stroke-width="0" stroke="#000000" fill="#000000">file4</text>
+ </g>
+</svg>
