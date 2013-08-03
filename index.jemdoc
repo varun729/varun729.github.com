@@ -1,0 +1,37 @@
+= Varun Agrawal
+
+~~~
+{}{img_left}{img/photo.jpg}{varun agrawal}{100px}{118px}{img/full_photo.jpg}
+[http://compas.cs.stonybrook.edu/~vagrawal/ Varun Agrawal], Graduate Student\n[http://www.cs.stonybrook.edu/ Computer Science]\n[http://www.stonybrook.edu/ Stony Brook University]
+
+Advisor: [http://compas.cs.stonybrook.edu/~mferdman/ Prof. Mike Ferdman]
+~~~
+
+== Contact
+[vagrawal@cs.stonybrook.edu]
+
+== Research
+Computer systems optimization
+
+== Projects
+- [https://github.com/varun729/fusegit FuseGit], a [http://git-scm.com/ git]-based [http://fuse.sourceforge.net FUSE] file system
+- 64 bit core based on a minimal X86 ISA - super scalar, out of order, 7 stage pipeline
+
+== Papers
+- [readings.html Reading list]
+
+== Teaching
+- Fall 2012
+  -- Data Structures & Algorithms
+- Spring 2013
+  -- Data Structures & Algorithms
+  -- Introduction to Programming in C
+
+== Education
+- Ph.D. (current), Computer Science, Stony Brook University (US), August 2012 - present
+- B.Tech., Electrical Engineering, IIT Kanpur (India), July 2010
+
+== Experience
+- Software Associate, Strand Life Sciences, Bangalore (India), August 2010 - June 2012
+- Teaching Assistant, Stony Brook University (US), August 2012 - May 2013
+
