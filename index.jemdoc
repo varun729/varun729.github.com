@@ -16,6 +16,7 @@ Computer systems optimization
 == Projects
 - [https://github.com/varun729/fusegit FuseGit], a [http://git-scm.com/ git]-based [http://fuse.sourceforge.net FUSE] file system
 - 64 bit core based on a minimal X86 ISA - super scalar, out of order, 7 stage pipeline
+- Protoplasm, a compiler for a minimal programming language [http://www.cs.sunysb.edu/~cram/cse504/Spring13/Homeworks/hw6.html Proto]
 
 == Papers
 - [readings.html Reading list]
