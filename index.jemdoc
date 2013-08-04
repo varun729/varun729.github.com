@@ -1,8 +1,8 @@
 = Varun Agrawal
 
 ~~~
-{}{img_left}{img/photo.jpg}{varun agrawal}{100px}{118px}{img/full_photo.jpg}
-[http://compas.cs.stonybrook.edu/~vagrawal/ Varun Agrawal], Graduate Student\n[http://www.cs.stonybrook.edu/ Computer Science]\n[http://www.stonybrook.edu/ Stony Brook University]
+{}{img_left}{img/photo.jpg}{varun agrawal}{120px}{142px}{img/full_photo.jpg}
+[http://compas.cs.stonybrook.edu/ Graduate student]\n[http://www.cs.stonybrook.edu/ Computer Science]\n[http://www.stonybrook.edu/ Stony Brook University]
 
 Advisor: [http://compas.cs.stonybrook.edu/~mferdman/ Prof. Mike Ferdman]
 ~~~
@@ -10,16 +10,15 @@ Advisor: [http://compas.cs.stonybrook.edu/~mferdman/ Prof. Mike Ferdman]
 == Contact
 [vagrawal@cs.stonybrook.edu]
 
-== Research
-Computer systems optimization
+== Research interests
+- Computer architecture
+- JIT compiler
+- Software optimization
 
 == Projects
 - [https://github.com/varun729/fusegit FuseGit], a [http://git-scm.com/ git]-based [http://fuse.sourceforge.net FUSE] file system
 - 64 bit core based on a minimal X86 ISA - super scalar, out of order, 7 stage pipeline
 - Protoplasm, a compiler for a minimal programming language [http://www.cs.sunysb.edu/~cram/cse504/Spring13/Homeworks/hw6.html Proto]
-
-== Papers
-- [readings.html Reading list]
 
 == Teaching
 - Fall 2012
