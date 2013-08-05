@@ -3,17 +3,12 @@
 ~~~
 {}{img_left}{img/photo.jpg}{varun agrawal}{120px}{142px}{img/full_photo.jpg}
 [http://compas.cs.stonybrook.edu/ Graduate student]\n[http://www.cs.stonybrook.edu/ Computer Science]\n[http://www.stonybrook.edu/ Stony Brook University]
-
-Advisor: [http://compas.cs.stonybrook.edu/~mferdman/ Prof. Mike Ferdman]
 ~~~
+
+I am a member of the [http://compas.cs.stonybrook.edu/ COMPAS lab] which is headed by [http://compas.cs.stonybrook.edu/~mferdman/ Prof. Mike Ferdman]. My research interests are computer architecture and systems.
 
 == Contact
 [vagrawal@cs.stonybrook.edu]
-
-== Research interests
-- Computer architecture
-- Just-In-Time compiler
-- Software optimization
 
 == Projects
 - [https://github.com/varun729/fusegit FuseGit], a [http://git-scm.com/ git]-based [http://fuse.sourceforge.net FUSE] file system
@@ -28,10 +23,10 @@ Advisor: [http://compas.cs.stonybrook.edu/~mferdman/ Prof. Mike Ferdman]
   -- Introduction to Programming in C
 
 == Education
-- Ph.D. (current), Computer Science, Stony Brook University (US), August 2012 - present
-- B.Tech., Electrical Engineering, IIT Kanpur (India), July 2010
+- Ph.D. (current), [http://www.cs.stonybrook.edu/ Computer Science], [http://www.stonybrook.edu/ Stony Brook University], August 2012 - present
+- B.Tech., [http://www.iitk.ac.in/ee/ Electrical Engineering], [http://www.iitk.ac.in/ Indian Institute of Technology Kanpur], July 2010
 
 == Experience
-- Software Associate, Strand Life Sciences, Bangalore (India), August 2010 - June 2012
+- Software Associate, [http://www.strandls.com/ Strand Life Sciences], Bangalore (India), August 2010 - June 2012
 - Teaching Assistant, Stony Brook University (US), August 2012 - May 2013
 
