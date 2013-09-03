@@ -24,4 +24,9 @@ Before coming to Stony Brook University, I completed my undergraduate studies in
   -- Data Structures & Algorithms
   -- Introduction to Programming in C
 
-
+== System configuration
+Following files come in handy when trying to setup a new machine (specially VMs):
+- [files/.Xresources .Xresources]
+- [files/.xinitrc .xinitrc]
+- [files/.vimrc .vimrc]
+- [files/.zshrc .zshrc]
