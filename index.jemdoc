@@ -24,12 +24,7 @@ Before coming to Stony Brook University, I completed my undergraduate studies in
   -- Data Structures & Algorithms
   -- Introduction to Programming in C
 
-== Useful links
-- [http://wiki.osdev.org/Calling_Conventions Calling conventions (OS, register)]
+== Pages
+- [links.html Useful links]
+- [config.html Configuration files]
 
-== System configuration
-Following files come in handy when trying to setup a new machine (specially VMs):
-- [files/.Xresources .Xresources]
-- [files/.xinitrc .xinitrc]
-- [files/.vimrc .vimrc]
-- [files/.zshrc .zshrc]

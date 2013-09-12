@@ -1,0 +1,7 @@
+= Configuration files
+Following files come in handy when trying to setup a new machine (specially VMs):
+- [files/.Xresources .Xresources]
+- [files/.xinitrc .xinitrc]
+- [files/.vimrc .vimrc]
+- [files/.zshrc .zshrc]
+
