@@ -4,7 +4,7 @@
 
 [http://www.amazon.com/Readings-Computer-Architecture-Morgan-Kaufmann/dp/1558605398/ Link to book on Amazon]
 
-Following is the list of papers from the book:
+Following is the list of papers from the book (obtained from [ftp://ftp.cs.wisc.edu/markhill/Papers/CAreadings_toc.pdf]):
 
 . Classic Machines: Technology, Implementation and Economics
   .. [Amd64] G. M. AMDAHL, G. A. BLAAUW, F. P. BROOKS, JR., "Architecture of the IBM System/360," IBM Journal of Research and Development, , April 1964.
