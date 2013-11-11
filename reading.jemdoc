@@ -7,14 +7,68 @@
 Following is the list of papers from the book:
 
 . Classic Machines: Technology, Implementation and Economics
-  .. ABC
+  .. [Amd64] G. M. AMDAHL, G. A. BLAAUW, F. P. BROOKS, JR., "Architecture of the IBM System/360," IBM Journal of Research and Development, , April 1964.
+  .. [Thor61] J. E. THORNTON " Parallel Operation in the Control Data 6600," Fall Joint Computers Conference, , vol. 26, pp. 33-40, 1961.
+  .. [Rus78] R. M. RUSSELL, "The Cray-1 Computer System", Comm. ACM, 21, 1 (January 1978), 63-72.
+  .. [Kol81] J. KOLODZEY, "Cray-1 Computer Technology", IEEE Transactions on Components, Hybrids, and Manufacturing Technology, p181-187, June 1981.
+  .. [Moo65] G. MOORE, "Cramming More Components onto Integrated Circuits", Electronics, p114-117, April 1965.
+  .. [Maz95] S. MAZOR, "The History of the Microcomputer - Invention and Evolution", Proc. IEEE Dec ’95, 1601-1607.
 . Methods
+  .. [Amd67] G. M. AMDAHL, "Validity of the Single-Processor Approach to Achieving Large Scale Computing Capabilities", AFIPS Conference Proceedings, (April 1967), 483-485.
+  .. [HiS89] M. D. HILL and A. J. SMITH, "Evaluating Associativity in CPU Caches", IEEE Trans. on Computers, C-38, 12 (December 1989), 1612-1630.
+  .. [EmC84] J. S. EMER and D. W. CLARK, "A Characterization of Processor Performance in the VAX-11/780", Proc. Eleventh International Symposium on Computer Architecture, Ann Arbor, MI (June 1984), 301-310.
 . Instruction Sets
-. Instruction Level Parallelism
+  .. [Wul81] W. A. WULF, "Compilers and Computer Architecture", IEEE Computer, 14, 7 (July 1981), 41-48.
+  .. [PaD80] G. RADIN "The 801 Minicomputer," Proc. Symposium on Architectural Support for Programming Languages and Operating Systems, March 1982, 39-47.
+  .. [PaD80] D. A. PATTERSON and D. R. DITZEL, "The Case for the Reduced Instruction Set Computer," ACM Computer Architecture News, 8, 6, 15 October 1980, 25-33.
+  .. [Col85] R. P. COLWELL, C. Y. HITCHCOCK, E. D. JENSEN, H. M. BRINKLEY SPRUNT, C. P. KOLLAR, "Computers, Complexity, and Controversy," IEEE Computer, vol. 18, no. 9, September 1985.
+  .. [Craw86] J. CRAWFORD, "Architecture of the Intel 80386," Proceedings of ICCD , pp. 155-160, October 1986.
+  .. [MHM95] S. MAHLKE, R. HANK, J. MCCORMICK, D. AUGUST, W. HWU, "A Comparison of Full and Partial Predicated Execution Support for ILP Processors", Proc. 22nd Annual Symposium on Computer Architecture (June 1995), 138-150.
+. Instruction Level Parallelism (ILP)
+  .. [AST67] D. W. ANDERSON, F. J. SPARACIO and R. M. TOMASULO, "The IBM System/360 Model 91: Machine Philosophy and Instruction-Handling", IBM Journal of Research and Development January 1967.
+  .. [SmP88] J. E. SMITH and A. R. PLESZKUN, "Implementing Precise Interrupts in Pipelined Processors", IEEE Trans. on Computers, C-37, 5 (May 1988), 562-573.
+  .. [Smi81] J. E. SMITH, "A Study of Branch Prediction Strategies", Proc. Eighth Annual Symposium on Computer Architecture (May 1981), 135-148.
+  .. [YP91] T.-Y. YEH and Y. N. PATT, "Two-Level Adaptive Branch Prediction," Proc. 24th Annual Workshop on Microprogramming (MICRO-24), Albuquerque, NM, (December 1991).
+  .. [PHS85] Y. N. PATT, W. W. HWU and M. SHEBANOW, "HPS, A New Microarchitecture: Introduction and Rationale," Proc. 18th Annual Workshop on Microprogramming, Pacific Grove, CA (December 1985), 103-108.
+  .. [SoV87] G. S. SOHI and S. VAJAPEYAM, "Instruction Issue Logic for High-Performance, Interruptable Pipelined Processors", Proc. 14th Annual Symposium on Computer Architecture (June 1987), 27-34.
+  .. [GRO90] G. F. GROHOSKI, "Machine Organization of the IBM RISC System/6000 processor," IBM Journal of Research and Development, 34, 1 (January 1990), 37-58.
+  .. [Yea96] K. C. YEAGER, "The MIPS R10000 Superscalar Microprocessor", IEEE Micro, 16, 2, April 1996, 28-40.
+  .. [RaF92] B. R. RAU and J. A. FISHER, "Instruction-Level Parallel Processing: History, Overview, and Perspective", The Journal of Supercomputing,, 7, 1, (??? 1993), 9-50. Reprinted in Rau and Fisher (ed.), "Instruction-Level Parallelism, Kluwer Academic Publishers, 1993.
 . Dataflow and Multithreading
+  .. [DM74] J. B. DENNIS and D. P. Misunas, "A Preliminary Architecture for a Basic Data-Flow Processor," Proc. 2nd Annual Symposium on Computer Architecture, Computer Architecture News, 3, 4 (December 1974), 126-132, ACM.
+  .. [ArN90] ARVIND and R. S. NIKHIL, "Executing a Program on the MIT Tagged-Token Dataflow Architecture", IEEE Trans. on Computers, 39, 3 (March 1990), 300-318.
+  .. [Smi82a] B. SMITH, "Architecture and Applications of the HEP Multiprocessor Computer System", Proc. of the Int. Soc. for Opt. Engr. (1981), 241-248.
+  .. [TEE96] D. M. TULLSEN, S. J. EGGERS, J. S. EMER, H. M. LEVY, J. L. LO and R. L. STAMM, "Exploiting Choice: Instruction Fetch and Issue on an Implementable Simultaneous
+  .. Multithreading Processor", Proc. 23rd Annual Symposium on Computer Architecture (May 1996), 191-202.
 . Memory Systems
+  .. [Wil65] M. V. WILKES, "Slave Memories and Dynamic Storage Allocation", IEEE Trans. on Electronic Computers, EC-14, 2 (April 1965), 270-271. J. S. LIPTAY, "Structural Aspects of the System/360 Model 85, Part II: The Cache", IBM Systems Journal,, 7, 1 (1968), 15-21).
+  .. [Kro81] D. KROFT, "Lockup-Free Instruction Fetch/Prefetch Cache Organization", Proc. Eighth Symposium on Computer Architecture (May 1981), 81-87.
+  .. [Goo83] J. R. GOODMAN, "Using Cache Memory to Reduce Processor-Memory Traffic", Proc. Tenth International Symposium on Computer Architecture, Stockholm, Sweden (June 1983), 124-131.
+  .. [Jou90] N. P. JOUPPI, "Improving Direct-Mapped Cache Performance by the Addition of a Small Fully-Associative Cache and Prefetch Buffers", Proc. 17th Annual Symposium on Computer Architecture, Computer Architecture News, 18, 2 (June 1990), 364-373, ACM.
+  .. T. KILBURN, D. B. G. EDWARDS, M. J. LANIGAN, F. H. SUMNER, "One-Level Storage System", IRE Transactions, EC-11, 2, (April 1962), 223-235.
+  .. [ClE85] D. W. CLARK and J. S. EMER, "Performance of the VAX-11/780 Translation Buffer: Simulation and Measurement", ACM Trans. on Computer Systems, 3, 1 (February 1985), 31-62.
+  .. [WBL89] W. WANG, J.-L. BAER and H. M. LEVY, "Organization and Performance of a Two-Level Virtual-Real Cache Hierarchy", Proc. 16th Annual International Symposium on Computer Architecture, Jerusalem (June 1989), 140-148.
 . I/O: Storage Systems, Networks and Graphics
+  .. [Smo89] M. SMOTHERMAN, "A Sequencing-based Taxonomy of I/O Systems and Review of Historical Machines", ACM Computer Architecture News 17:5, (September 1989), pgs 5-15.
+  .. [RuW94] C. RUEMMLER and J. WILKES, "An Introduction to Disk Drive Modeling", IEEE Computer vol 27 #3, March 1994, pgs 17-28.
+  .. [PGK88] D. A. PATTERSON, G. GIBSON and R. H. KATZ, "A Case for Redundant Arrays of Inexpensive Disks (RAID)", Proc. ACM SIGMOD Conference, Chicago, Illinois (June 1988).
+  .. [MeB75] R. METCALFE and D. BOGGS, "Ethernet: Distributed Packet Switching for Local Computer Networks." Communications of the ACM, 19(7):395-404.
+  .. [NiM93] L. NI and P. MCKINLEY, "A Survey of Wormhole Routing Techniques in Direct Networks", IEEE Computer, February 1993, vol 26 #2, pgs 62-76.
+  .. [Ake93] K. AKERLY, "Reality Engine Graphics", SIGGRAPH ’93 Proceedings, pp 109-116.
 . Single-Instruction Multiple Data (SIMD) Parallelism
+  .. [FLY66] M. J. FLYNN, " Very High-Speed Computing Systems", Proceedings of the IEEE , vol. 54, no. 12, December 1966.
+  .. [KUST82] D. J. KUCK and R. A. STOKES, "The Burroughs Scientific Processor (BSP)", IEEE Trans. on Computers , vol. C-31, pp. 363-376, May 1982.
+  .. [GHI95] M. GOKHALE, B. HOLMES, K. IOBST, "Processing in Memory: The Terasys Massively Parallel PIM Array", IEEE Computer, 28, 4 (April 1995), 23-31.
 . Multiprocessors and Multicomputers
+  .. [WuH78] W. A. WULF and S. P. HARBISON, "Reflections in a pool of processors/An experience report on C.mmp/Hydra", Proc. National Computer Conference (AFIPS) (June 1978).
+  .. [Lam79] L. LAMPORT, "How to Make a Multiprocessor Computer That Correctly Executes Multiprocess Programs", IEEE Trans. on Computers, C-28, 9 (September 1979), 690-691.
+  .. [CeF78] L. M. CENSIER and P. FEAUTRIER, "A New Solution to Coherence Problems in Multicache Systems", IEEE Transactions on Computers, C-27, 12 (December 1978), 1112-1118.
+  .. [LLG92] D. LENOSKI, J. LAUDON, K. GHARACHORLOO, W. WEBER, A. GUPTA, J. HENNESSY, M. HOROWITZ and M. LAM, "The Stanford DASH Multiprocessor", IEEE Computer, 25, 3 (March 1992), 63-79.
+  .. [HLH92] E. HAGERSTEN, A. LANDIN, and S. HARIDI, "DDM--A Cache-Only Memory Architecture", IEEE Computer, 25, 9 (September 1992), 44-54.
+  .. [Sei85] C. L. SEITZ, "The Cosmic Cube", Comm. ACM (January 1985), 22-33.
+  .. [LiH89] K. LI and P. HUDAK, "Memory Coherence in Shared Virtual Memory Systems", ACM Trans. on Computer Systems, 7, 4 (November 1989), 321-359.
 . Recent Implementations and Future Prospects
-
+  .. [AlA93] D. ALPERT, D. AVNON, "Architecture of the Pentium Microprocessor", IEEE Micro, June ’93, 11-21.
+  .. [Pap96] D. PAPWORTH, "Tuning the Pentium Pro MicroArchitecture", IEEE Micro April ’96, 8-15.
+  .. [Sla96] M. SLATER, "The Microprocessor Today", IEEE Micro Dec ’96, 32-44.
+  .. [Yu96] A. YU, "The Future of Microprocessors”, IEEE Micro Dec '96, 46-53.
