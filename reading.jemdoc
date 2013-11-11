@@ -10,6 +10,9 @@ This page lists all the papers/articles on my reading list. After reading, the i
 . Avinash Sodani , Gurindar S. Sohi, "Understanding the differences between value prediction and instruction reuse", Proceedings of the 31st annual ACM/IEEE international symposium on Microarchitecture, p.205-215, November 1998, Dallas, Texas, United States.
 . Avinash Sodani , Gurindar S. Sohi, "An empirical analysis of instruction repetition", ACM SIGOPS Operating Systems Review, v.32 n.5, p.35-45, Dec. 1998.
 . Jian Huang , David J. Lilja, "Extending Value Reuse to Basic Blocks with Compiler Support", IEEE Transactions on Computers, v.49 n.4, p.331-347, April 2000.
+. Henry Massalin, "Superoptimizer: a look at the smallest program", Proceedings of the second international conference on Architectual support for programming languages and operating systems, p.122-126, October 1987, Palo Alto, California, United States.
+. Calton Pu , Henry Massalin , John Ioannidis, "The Synthesis Kernel", Computing Systems, Vol. 1 No. 1, Winter 1988.
+. Alexia (former Henry) Massalin, [http://valerieaurora.org/synthesis/SynthesisOS/index.html Synthesis: An Efficient Implementation of Fundamental Operating System Services], Thesis, Columbia University, 1992.
 
 == Papers from 'Readings in Computer Architecture'
 
