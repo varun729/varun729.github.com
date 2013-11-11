@@ -13,6 +13,44 @@ This page lists all the papers/articles on my reading list. After reading, the i
 . Henry Massalin, "Superoptimizer: a look at the smallest program", Proceedings of the second international conference on Architectual support for programming languages and operating systems, p.122-126, October 1987, Palo Alto, California, United States.
 . Calton Pu , Henry Massalin , John Ioannidis, "The Synthesis Kernel", Computing Systems, Vol. 1 No. 1, Winter 1988.
 . Alexia (former Henry) Massalin, [http://valerieaurora.org/synthesis/SynthesisOS/index.html Synthesis: An Efficient Implementation of Fundamental Operating System Services], Thesis, Columbia University, 1992.
+. Mohamed A. Gomaa , T. N. Vijaykumar, Opportunistic Transient-Fault Detection, IEEE Micro, v.26 n.1, p.92-99, January 2006
+. Daniel Citron , Dror G. Feitelson, "Look it up" or "do the math": an energy, area, and timing analysis of instruction reuse and memoization, Proceedings of the Third international conference on Power - Aware Computer Systems, December 01, 2003, San Diego, CA
+. Walid J. Ghandour , Haitham Akkary , Wes Masri, The potential of using dynamic information flow analysis in data value prediction, Proceedings of the 19th international conference on Parallel architectures and compilation techniques, September 11-15, 2010, Vienna, Austria
+. Avinash Sodani , Gurindar S. Sohi, Understanding the differences between value prediction and instruction reuse, Proceedings of the 31st annual ACM/IEEE international symposium on Microarchitecture, p.205-215, November 1998, Dallas, Texas, United States
+. Haitham Akkary , Michael A. Driscoll, A dynamic multithreading processor, Proceedings of the 31st annual ACM/IEEE international symposium on Microarchitecture, p.226-236, November 1998, Dallas, Texas, United States
+. Teresa Monreal , Antonio González , Mateo Valero , José González , Victor Viñals, Delaying physical register allocation through virtual-physical registers, Proceedings of the 32nd annual ACM/IEEE international symposium on Microarchitecture, p.186-192, November 16-18, 1999, Haifa, Israel
+. Avinash Sodani , Gurindar S. Sohi, An empirical analysis of instruction repetition, ACM SIGOPS Operating Systems Review, v.32 n.5, p.35-45, Dec. 1998
+. Kai Wang , Manoj Franklin, Highly accurate data value prediction using hybrid predictors, Proceedings of the 30th annual ACM/IEEE international symposium on Microarchitecture, p.281-290, December 01-03, 1997, Research Triangle Park, North Carolina, United States
+. Jian Huang , David J. Lilja, Extending Value Reuse to Basic Blocks with Compiler Support, IEEE Transactions on Computers, v.49 n.4, p.331-347, April 2000
+. Daniel A. Connors , Wen-mei W. Hwu, Compiler-directed dynamic computation reuse: rationale and initial results, Proceedings of the 32nd annual ACM/IEEE international symposium on Microarchitecture, p.158-169, November 16-18, 1999, Haifa, Israel
+. Daniel A. Connors , Hillery C. Hunter , Ben-Chung Cheng , Wen-mei W. Hwu, Hardware support for dynamic activation of compiler-directed computation reuse, ACM SIGOPS Operating Systems Review, v.34 n.5, p.222-233, Dec. 2000
+. Amir Roth , Gurindar S. Sohi, Register integration: a simple and efficient implementation of squash reuse, Proceedings of the 33rd annual ACM/IEEE international symposium on Microarchitecture, p.223-234, December 2000, Monterey, California, United States
+. Daniel Citron , Dror Feitelson , Larry Rudolph, Accelerating multi-media processing by implementing memoing in multiplication and division units, ACM SIGPLAN Notices, v.33 n.11, p.252-261, Nov. 1998
+. Guoping Long , Diana Franklin , Susmit Biswas , Pablo Ortiz , Jason Oberg , Dongrui Fan , Frederic T. Chong, Minimal Multi-threading: Finding and Removing Redundant Instructions in Multi-threaded Processors, Proceedings of the 2010 43rd Annual IEEE/ACM International Symposium on Microarchitecture, p.337-348, December 04-08, 2010
+. Craig Zilles , Gurindar Sohi, Master/slave speculative parallelization, Proceedings of the 35th annual ACM/IEEE international symposium on Microarchitecture, November 18-22, 2002, Istanbul, Turkey
+. Chen-Yong Cher , T. N. Vijaykumar, Skipper: a microarchitecture for exploiting control-flow independence, Proceedings of the 34th annual ACM/IEEE international symposium on Microarchitecture, December 01-05, 2001, Austin, Texas
+. G. Surendra , Subhasis Banerjee , S. K. Nandy, On the effectiveness of prefetching and reuse in reducing L1 data cache traffic: a case study of Snort, Proceedings of the 3rd workshop on Memory performance issues: in conjunction with the 31st international symposium on computer architecture, p.88-95, June 20-20, 2004, Munich, Germany
+. Andreas Moshovos , Scott E. Breach , T. N. Vijaykumar , Gurindar S. Sohi, Dynamic speculation and synchronization of data dependences, ACM SIGARCH Computer Architecture News, v.25 n.2, p.181-193, May 1997
+. Yiannakis Sazeides , James E. Smith, The predictability of data values, Proceedings of the 30th annual ACM/IEEE international symposium on Microarchitecture, p.248-258, December 01-03, 1997, Research Triangle Park, North Carolina, United States
+. Eric Larson , Todd Austin, Compiler controlled value prediction using branch predictor based confidence, Proceedings of the 33rd annual ACM/IEEE international symposium on Microarchitecture, p.327-336, December 2000, Monterey, California, United States
+. Ahmed S. Al-Zawawi , Vimal K. Reddy , Eric Rotenberg , Haitham H. Akkary, Transparent control independence (TCI), ACM SIGARCH Computer Architecture News, v.35 n.2, May 2007
+. Parthasarathy Ranganathan , Sarita Adve , Norman P. Jouppi, Reconfigurable caches and their application to media processing, ACM SIGARCH Computer Architecture News, v.28 n.2, p.214-224, May 2000
+. Youfeng Wu , Dong-Yuan Chen , Jesse Fang, Better exploration of region-level value locality with integrated computation reuse and value prediction, ACM SIGARCH Computer Architecture News, v.29 n.2, p.98-108, May 2001
+. Amir Roth, Store Vulnerability Window (SVW): Re-Execution Filtering for Enhanced Load Optimization, ACM SIGARCH Computer Architecture News, v.33 n.2, p.458-468, May 2005
+. Yiannakis Sazeides , James E. Smith, Limits of Data Value Predictability, International Journal of Parallel Programming, v.27 n.4, p.229-256, Aug. 1999
+. Zach Purser , Karthik Sundaramoorthy , Eric Rotenberg, A study of slipstream processors, Proceedings of the 33rd annual ACM/IEEE international symposium on Microarchitecture, p.269-280, December 2000, Monterey, California, United States
+. Kevin M. Lepak , Gordon B. Bell , Mikko H. Lipasti, Silent Stores and Store Value Locality, IEEE Transactions on Computers, v.50 n.11, p.1174-1190, November 2001
+. Mafijul Md. Islam , Per Stenstrom, Zero loads: canceling load requests by tracking zero values, Proceedings of the 9th workshop on MEmory performance: DEaling with Applications, systems and architecture, p.16-23, October 26-26, 2008, Toronto, Canada
+. James Tuck , Wonsun Ahn , Luis Ceze , Josep Torrellas, SoftSig: software-exposed hardware signatures for code analysis and optimization, ACM SIGPLAN Notices, v.43 n.3, March 2008
+. Ioana Burcea , Stephen Somogyi , Andreas Moshovos , Babak Falsafi, Predictor virtualization, ACM SIGPLAN Notices, v.43 n.3, March 2008
+. Rania H. Mameesh , Manoj Franklin, Speculative-aware execution: a simple and efficient technique for utilizing multi-cores to improve single-thread performance, Proceedings of the 19th international conference on Parallel architectures and compilation techniques, September 11-15, 2010, Vienna, Austria
+. Jian Huang , David J. Lilja, Balancing Reuse Opportunities and Performance Gains with Subblock Value Reuse, IEEE Transactions on Computers, v.52 n.8, p.1032-1050, August 2003
+. Karthik Sundaramoorthy , Zach Purser , Eric Rotenburg, Slipstream processors: improving both performance and fault tolerance, ACM SIGARCH Computer Architecture News, v.28 n.5, p.257-268, Dec. 2000
+. Mayank Agarwal , Nitin Navale , Kshitiz Malik , Matthew I. Frank, Fetch-Criticality Reduction through Control Independence, ACM SIGARCH Computer Architecture News, v.36 n.3, p.13-24, June 2008
+. Keith D. Cooper , Li Xu, An efficient static analysis algorithm to detect redundant memory operations, ACM SIGPLAN Notices, v.38 n.2 supplement, p.97-107, February 2003
+. Mafijul Md. Islam , Magnus Själander , Per Stenström, Early detection and bypassing of trivial operations to improve energy efficiency of processors, Microprocessors & Microsystems, v.32 n.4, p.183-196, June, 2008
+. Michael D. Smith, Overcoming the challenges to feedback-directed optimization (Keynote Talk), ACM SIGPLAN Notices, v.35 n.7, p.1-11, July 2000
+
 
 == Papers from 'Readings in Computer Architecture'
 
