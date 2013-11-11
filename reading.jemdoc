@@ -1,0 +1,19 @@
+= Readings in Computer Architecture
+
+- Mark D. Hill, Norman P. Jouppi, Gurindar S. Sohi
+
+[http://www.amazon.com/Readings-Computer-Architecture-Morgan-Kaufmann/dp/1558605398/ Link to book on Amazon]
+
+Following is the list of papers from the book:
+
+. Classic Machines: Technology, Implementation and Economics
+. Methods
+. Instruction Sets
+. Instruction Level Parallelism
+. Dataflow and Multithreading
+. Memory Systems
+. I/O: Storage Systems, Networks and Graphics
+. Single-Instruction Multiple Data (SIMD) Parallelism
+. Multiprocessors and Multicomputers
+. Recent Implementations and Future Prospects
+
