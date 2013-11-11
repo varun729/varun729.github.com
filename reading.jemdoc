@@ -1,11 +1,11 @@
 = Readings
 
-This page lists all the papers/articles on my reading list. After reading, the items will be striked off.
+This page lists all the papers/articles on my reading list. After reading, the items will be in bold font.
 
 == General
 
-. {{<del>Ravi Rajwar , James R. Goodman, "Speculative lock elision: enabling highly concurrent multithreaded execution", Proceedings of the 34th annual ACM/IEEE international symposium on Microarchitecture, December 01-05, 2001, Austin, Texas.</del>}}
-. {{<del>Avinash Sodani , Gurindar S. Sohi, "Dynamic instruction reuse", Proceedings of the 24th annual international symposium on Computer architecture, p.194-205, June 01-04, 1997, Denver, Colorado, United States.</del>}}
+. *Ravi Rajwar , James R. Goodman, "Speculative lock elision: enabling highly concurrent multithreaded execution", Proceedings of the 34th annual ACM/IEEE international symposium on Microarchitecture, December 01-05, 2001, Austin, Texas.*
+. *Avinash Sodani , Gurindar S. Sohi, "Dynamic instruction reuse", Proceedings of the 24th annual international symposium on Computer architecture, p.194-205, June 01-04, 1997, Denver, Colorado, United States.*
 . Sarita V. Adve , Doug Burger , Rudolf Eigenmann , Alasdair Rawsthorne , Michael D. Smith , Catherine H. Gebotys , Mahmut T. Kandemir , David J. Lilja , Alok N. Choudhary , Jesse Z. Fang , Pen-Chung Yew, "Changing Interaction of Compiler and Architecture", Computer, v.30 n.12, p.51-58, December 1997.
 . Avinash Sodani , Gurindar S. Sohi, "Understanding the differences between value prediction and instruction reuse", Proceedings of the 31st annual ACM/IEEE international symposium on Microarchitecture, p.205-215, November 1998, Dallas, Texas, United States.
 . Avinash Sodani , Gurindar S. Sohi, "An empirical analysis of instruction repetition", ACM SIGOPS Operating Systems Review, v.32 n.5, p.35-45, Dec. 1998.
