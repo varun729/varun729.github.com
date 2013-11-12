@@ -14,7 +14,7 @@ Before coming to Stony Brook University, I completed my undergraduate studies in
 
 == Projects
 - Dremel (JIT Kernels)
-  -- [http://compas.cs.stonybrook.edu/~vagrawal/files/sosp13-poster-jit-kernel.pdf JIT Kernels: An Idea Whose Time Has (Just) Come] (Poster), SOSP 2013
+  -- [http://compas.cs.stonybrook.edu/~vagrawal/files/posters/sosp13-jit-kernel.pdf JIT Kernels: An Idea Whose Time Has (Just) Come] (Poster), SOSP 2013
 - [https://github.com/varun729/fusegit FuseGit], a [http://git-scm.com/ git]-based [http://fuse.sourceforge.net FUSE] file system
 - 64 bit core based on a minimal X86 ISA - super scalar, out of order, 7 stage pipeline
 - Protoplasm, a compiler for a minimal programming language [http://www.cs.sunysb.edu/~cram/cse504/Spring13/Homeworks/hw6.html Proto]
