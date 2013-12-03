@@ -43,9 +43,31 @@ and using a simpler instruction set may not be feasible for all languages.</p>
 software becomes more complex now. And thus the compiler-writers need to take
 care of all the complexity in software. How to compare the complexity in
 hardware space with the complexity in software space?</p>
+<h2>RISC : A reduced instruction set VLSI computer</h2>
+<h3>David A. Patterson; Carlo H. Sequin</h3>
+<p>This paper talks about the details of the first implementation of the RISC
+machine. It is tested on a student simulator, and thus performance results are
+only estimates. The most astonishing feature of the paper is that the number of
+instructions is only 2/3rd more than a CISC machine (e.g. VAX). Since the
+instructions are simple, the program size was expected to bloat up, especially
+when no effort was made to reduce the program size.</p>
+<p>Another astonishing feature was that in CISC machines there were more than 50<tt>
+memory operations, but with RISC architecture the memory operations were reduced
+to around 20</tt>. This is due to the overlapping register windows, which allows
+passing values to routines through registers instead of passing on stack. Since
+most of the memory accesses were due to call/return procedures, by using
+overlapping register windows, RISC was able to reduce the memory accesses. Most
+variable accesses were found to be local variables, and thus by keeping them in
+registers, memory accesses are reduced. This was only possible because of the
+huge register set (32 registers, and set of overlapping register banks).</p>
+<p>The register inputs for every instruction are prefetched in the previous
+instruction. Since this was a problem with the branch instructions, all the
+branch instructions are delayed by one instruction. Thus, every branch is
+followed by a NOP. By rearranging instructions, we can have useful instructions
+executed after the branch - this reduces the NOP count.</p>
 <div id="footer">
 <div id="footer-text">
-Page generated 2013-12-02 21:46:12 EST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+Page generated 2013-12-03 01:35:33 EST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
 </div>
 </div>
 </div>
