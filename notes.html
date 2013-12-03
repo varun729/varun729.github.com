@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Reading Notes</title>
+</head>
+<body>
+<div id="layout-content">
+<div id="toptitle">
+<h1>Reading Notes</h1>
+</div>
+<h2>The case for the reduced instruction set</h2>
+<h3>David A. Patterson; David R. Ditzel</h3>
+<p>This paper gives arguments in favor of RISC instruction set. The main argument
+is the complexity and speed of execution. Given that CISC instruction set is
+more complex, it takes more time to implement the architecture. The microcode
+(architecture logic) also is more complicated and needs more die space. Only a
+fraction of the instruction set is actually used while running any program, thus
+complex instructions can be broken into several simple instructions. There are
+certain complex instructions which take more time than simpler implementations.</p>
+<p>Overall the point of the paper was towards the complexity and the increased cost
+on all fronts - design, manufacture, debug, die space. With RISC architecture,
+because of simpler logic, more space on the die could be used for cache memory,
+or pipelining.</p>
+<p>The examples in the paper and handpicked and prove the point nicely. But there
+is no concrete definition of a RISC or even a CISC architecture. How to
+differentiate between a complex design from a simpler one, where to draw the
+line?</p>
+<div id="footer">
+<div id="footer-text">
+Page generated 2013-12-02 21:33:47 EST, by <a href="http://jemdoc.jaboc.net/">jemdoc</a>.
+</div>
+</div>
+</div>
+</body>
+</html>
