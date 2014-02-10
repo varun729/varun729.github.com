@@ -4,4 +4,5 @@ Following files come in handy when trying to setup a new machine (specially VMs)
 - [files/.xinitrc .xinitrc]
 - [files/.vimrc .vimrc]
 - [files/.zshrc .zshrc]
+- [files/.i3-config .i3-config]
 
