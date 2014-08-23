@@ -1,7 +1,7 @@
 = Varun Agrawal
 
 ~~~
-{}{img_left}{img/photo.jpg}{varun agrawal}{120px}{142px}{img/full_photo.jpg}
+{}{img_left}{img/photo.jpg}{varun agrawal}{142px}{120px}{img/full_photo.jpg}
 [http://compas.cs.stonybrook.edu/ PhD student]\n[http://www.cs.stonybrook.edu/ Computer Science]\n[http://www.stonybrook.edu/ Stony Brook University]
 ~~~
 
@@ -20,11 +20,13 @@ Before coming to Stony Brook University, I completed my undergraduate studies in
 - Protoplasm, a compiler for a minimal programming language [http://www.cs.sunysb.edu/~cram/cse504/Spring13/Homeworks/hw6.html Proto]
 
 == Teaching
-- Teaching Assistant, Fall 2012
-  -- Data Structures & Algorithms
+- Teaching Assistant, Spring 2014
+  -- Introduction to Computer Architecture
 - Teaching Assistant, Spring 2013
   -- Data Structures & Algorithms
   -- Introduction to Programming in C
+- Teaching Assistant, Fall 2012
+  -- Data Structures & Algorithms
 
 == Pages
 - \[[http://www.cs.berkeley.edu/~jaein/ar.html Reading]\] \[[notes.html Notes]\]
