@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Varun Agrawal</title>
+    <link>http://varun729.github.com/hugo/</link>
+    <description>Recent content on Varun Agrawal</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Sep 2016 22:25:26 -0400</lastBuildDate>
+    <atom:link href="http://varun729.github.com/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Using WinDbg-1</title>
+      <link>http://varun729.github.com/hugo/post/using-windbg-1/</link>
+      <pubDate>Wed, 07 Sep 2016 22:25:26 -0400</pubDate>
+      
+      <guid>http://varun729.github.com/hugo/post/using-windbg-1/</guid>
+      <description>
+
+&lt;p&gt;Behind all the UI of Windows, there still exists software that is running. And when you are writing software it is bound to break and you want to debug it. GDB on Linux has helped me debug programs. Although, it took me some time to get used to understanding GDB, I am able to understand some of the intrinsics of how it works and can use it for debugging programs. I want to be able to debug Windows programs with the same ability, especially the programs that I write.&lt;/p&gt;
+
+&lt;p&gt;I am starting to use WinDbg to debug executables on Windows. I am using my Windows machine to learn and program in Go. While programming, I want to start learning a debugging tool as well, and I find that WinDbg is a good option. This series of articles would be an \&amp;ldquo;experience\&amp;rdquo; article, where I will jot down how I am using WinDbg and the tricks that I am learning. I hope that in a few months, I can do some of the basic debugging tasks on WinDbg with ease even when debugging Go programs.&lt;/p&gt;
+
+&lt;h3 id=&#34;view&#34;&gt;View&lt;/h3&gt;
+
+&lt;p&gt;WinDbg is GUI tool that can load an executable for debugging.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;File &amp;gt; Open Executable&amp;hellip;
+
+&lt;ul&gt;
+&lt;li&gt;loads the executable in memory&lt;/li&gt;
+&lt;li&gt;opens a Command window where we interact with the debugger (step, go, etc.)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;View &amp;gt; Disassembly
+
+&lt;ul&gt;
+&lt;li&gt;opens a Disassembly window where the instructions around the current instruction are listed&lt;/li&gt;
+&lt;li&gt;if we enter a function, the code in the Disassembly windows updates to the code in the function&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;commands&#34;&gt;Commands&lt;/h3&gt;
+
+&lt;p&gt;There are several debugger commands to interact with the debugger. I am only listing a few here that I am starting to use.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Go (g) : This starts executing the program. This command looks similar to the &amp;lsquo;continue&amp;rsquo; or &amp;lsquo;run&amp;rsquo; command in gdb.&lt;/li&gt;
+&lt;li&gt;Step Into (t) : This command allows to step into the program. Thus, we execute one instruction at a time. Very useful to analyze problematic code.&lt;/li&gt;
+&lt;li&gt;Call stack (k) : This command prints the call stack. It is useful to find the control flow.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&#34;info&#34;&gt;Info&lt;/h3&gt;
+
+&lt;p&gt;When we load the executable, command window displays the following information:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;CommandLine: \&amp;ldquo;####exe_name####\&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Symbol search path is: srv*&lt;/p&gt;
+
+&lt;p&gt;Executable search path is:&lt;/p&gt;
+
+&lt;p&gt;ModLoad: 00000000 00400000 00000000 00677000   &lt;code&gt;image00000000&lt;/code&gt;00400000&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Here &lt;code&gt;image00000000&lt;/code&gt; is the name of the memory region of the program executable.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using Inkscape to get PDF images from PDF documents</title>
+      <link>http://varun729.github.com/hugo/post/using-inkscape-to-get-pdf-images-from-pdf-documents/</link>
+      <pubDate>Wed, 07 Sep 2016 22:25:19 -0400</pubDate>
+      
+      <guid>http://varun729.github.com/hugo/post/using-inkscape-to-get-pdf-images-from-pdf-documents/</guid>
+      <description>&lt;p&gt;I use PDF images in my LateX documents. Creating PDF images from Python and gnuplot is trivial because of the rich API features. However, I sometimes generate plots in Microsoft Excel, where images can only be saved as PNG, JPG or other pixel formats and not in any of the vector formats. (Excel on Mac OS X allows saving images in PDF format)&lt;/p&gt;
+
+&lt;p&gt;##Workaround
+I found a workaround for getting PDF images from Microsoft products. Following are the steps that I use. I am only explaining the steps here in as much detail as text allows.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Export the document in PDF format. The image will be exported as a vector object, but will be part of the parent document. In order to get the image in PDF to use in LateX, we need to do more. If we select the image in Microsoft Excel, and then export the document, then the PDF will only contain the image, but the image will be smaller than the document size.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Open the PDF document in Inkscape. There is an option for \&amp;ldquo;Precision of approximating gradient meshes\&amp;ldquo;, which we set to the maximum or &lt;em&gt;very fine&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 3.&lt;/strong&gt; Press Ctrl+A to select the image in the document. If there are other contents in the document, delete them by selecting them individually.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 4.&lt;/strong&gt; After selecting the image, click on \&amp;ldquo;File &amp;gt; Document Properties\&amp;ldquo;. In \&amp;ldquo;Custom Size\&amp;ldquo;, expand \&amp;ldquo;Resize page to content&amp;hellip;\&amp;ldquo;. Click on the button \&amp;ldquo;Resize page to drawing or selection\&amp;ldquo;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 5.&lt;/strong&gt; Save the document in Inkscape (we opened PDF, so the PDF will be overwritten). You can also \&amp;ldquo;Save as\&amp;rdquo; another file.&lt;/p&gt;
+
+&lt;p&gt;These steps will allow cropping PDF documents to get a PDF image within the document. This is much better than cutting the image after opening the PDF in a PDF document viewer such as Adobe Acrobat viewer.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Using Inkscape to Change Font Colors in PDF</title>
+      <link>http://varun729.github.com/hugo/post/using-inkscape-to-change-font-colors-in-pdf/</link>
+      <pubDate>Wed, 07 Sep 2016 22:25:14 -0400</pubDate>
+      
+      <guid>http://varun729.github.com/hugo/post/using-inkscape-to-change-font-colors-in-pdf/</guid>
+      <description>&lt;p&gt;Inkscape is a pretty handy tool to edit vector graphics. PDF files are vector images, and thus can be edited using Inkscape.&lt;/p&gt;
+
+&lt;p&gt;I recently found an image that I generated from Excel, where I forgot to change the font color to black. Now that I have the image in the perfect size, I don&amp;rsquo;t want to go back to Excel and fiddle with the settings all over again. Following are the steps that I take to change the font color.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 1.&lt;/strong&gt; Open the PDF image in Inkscape with the \&amp;ldquo;very fine\&amp;rdquo; setting in the \&amp;ldquo;PDF Import Settings.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Step 2.&lt;/strong&gt; Select the component whose color you want to change, and then select desired color from the Pallette.&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;At the bottom of the page is \&amp;ldquo;Pallette\&amp;rdquo; (View &amp;gt; Show/Hide &amp;gt; Pallette, in case you don&amp;rsquo;t see the pallette).&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Halloa Jeeves</title>
+      <link>http://varun729.github.com/hugo/post/halloa-jeeves/</link>
+      <pubDate>Wed, 07 Sep 2016 22:24:59 -0400</pubDate>
+      
+      <guid>http://varun729.github.com/hugo/post/halloa-jeeves/</guid>
+      <description>&lt;p&gt;I do not want to bore you with the details, but I have to tell you the week I spent reading Wodehouse&amp;rsquo;s \&amp;ldquo;My Man Jeeves\&amp;ldquo;. I have not seen many people wandering around with books in their hand, which I think is because I never read many books and so didn&amp;rsquo;t my company. However, I had often seen one person with a book in hand often, and the book I saw was by Wodehouse. I decided then that if I am going to read books ever, I will give this author a try.&lt;/p&gt;
+
+&lt;p&gt;The year is 2016, and for some unknown reason, I have started to like reading books and have completed six books so far. I picked up My Man Jeeves in July one day, and guess what the short stories are so amazing that I cannot keep the book down without completing a story. I would read 2 or 3 stories a day, and I finished the book in a week.&lt;/p&gt;
+
+&lt;p&gt;Wodehouse definitely had a peculiar style of writing, which is hard to follow, but the context is so well defined that most of things you can understand right from the context. I am looking forward to reading more books by Wodehouse.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Betweeness Algorithm</title>
+      <link>http://varun729.github.com/hugo/post/betweeness-algorithm/</link>
+      <pubDate>Wed, 07 Sep 2016 22:24:53 -0400</pubDate>
+      
+      <guid>http://varun729.github.com/hugo/post/betweeness-algorithm/</guid>
+      <description>&lt;p&gt;Graph theory is interesting. My current project involves improving the performance of graph algorithms by converting memory accesses to random addresses into memory accesses to sequential memory. This improves the memory access latency, and thus improves performance of the application. Because graph algorithms access nearby nodes, sometimes it is not possible to rearrange the memory to make the accesses sequential. For such cases, we can prefetch the memory contents from memory as we perform computation.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>http://varun729.github.com/hugo/post/about-me/</link>
+      <pubDate>Mon, 05 Sep 2016 02:34:19 -0400</pubDate>
+      
+      <guid>http://varun729.github.com/hugo/post/about-me/</guid>
+      <description>&lt;p&gt;Hello and welcome to my home page.&lt;/p&gt;
+
+&lt;p&gt;I am graduate student in the Computer Science department at Stony Brook University, which is located on &lt;a href=&#34;https://goo.gl/maps/2dJP1y1hpy92&#34;&gt;Long Island, NY&lt;/a&gt;. I am interested in all things pertaining to computers, even if I can only understand parts of it. My current interests are computer microarchitecture, memory hierarchy, operating system design, and algorithms.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
