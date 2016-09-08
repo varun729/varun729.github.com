@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Varun Agrawal</title>
-    <link>http://varun729.github.com/hugo/post/</link>
+    <link>http://agrawal-varun.com/post/</link>
     <description>Recent content in Posts on Varun Agrawal</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 07 Sep 2016 22:25:26 -0400</lastBuildDate>
-    <atom:link href="http://varun729.github.com/hugo/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://agrawal-varun.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Using WinDbg-1</title>
-      <link>http://varun729.github.com/hugo/post/using-windbg-1/</link>
+      <link>http://agrawal-varun.com/post/using-windbg-1/</link>
       <pubDate>Wed, 07 Sep 2016 22:25:26 -0400</pubDate>
       
-      <guid>http://varun729.github.com/hugo/post/using-windbg-1/</guid>
+      <guid>http://agrawal-varun.com/post/using-windbg-1/</guid>
       <description>
 
 &lt;p&gt;Behind all the UI of Windows, there still exists software that is running. And when you are writing software it is bound to break and you want to debug it. GDB on Linux has helped me debug programs. Although, it took me some time to get used to understanding GDB, I am able to understand some of the intrinsics of how it works and can use it for debugging programs. I want to be able to debug Windows programs with the same ability, especially the programs that I write.&lt;/p&gt;
@@ -70,10 +70,10 @@
     
     <item>
       <title>Using Inkscape to get PDF images from PDF documents</title>
-      <link>http://varun729.github.com/hugo/post/using-inkscape-to-get-pdf-images-from-pdf-documents/</link>
+      <link>http://agrawal-varun.com/post/using-inkscape-to-get-pdf-images-from-pdf-documents/</link>
       <pubDate>Wed, 07 Sep 2016 22:25:19 -0400</pubDate>
       
-      <guid>http://varun729.github.com/hugo/post/using-inkscape-to-get-pdf-images-from-pdf-documents/</guid>
+      <guid>http://agrawal-varun.com/post/using-inkscape-to-get-pdf-images-from-pdf-documents/</guid>
       <description>&lt;p&gt;I use PDF images in my LateX documents. Creating PDF images from Python and gnuplot is trivial because of the rich API features. However, I sometimes generate plots in Microsoft Excel, where images can only be saved as PNG, JPG or other pixel formats and not in any of the vector formats. (Excel on Mac OS X allows saving images in PDF format)&lt;/p&gt;
 
 &lt;p&gt;##Workaround
@@ -95,10 +95,10 @@ I found a workaround for getting PDF images from Microsoft products. Following a
     
     <item>
       <title>Using Inkscape to Change Font Colors in PDF</title>
-      <link>http://varun729.github.com/hugo/post/using-inkscape-to-change-font-colors-in-pdf/</link>
+      <link>http://agrawal-varun.com/post/using-inkscape-to-change-font-colors-in-pdf/</link>
       <pubDate>Wed, 07 Sep 2016 22:25:14 -0400</pubDate>
       
-      <guid>http://varun729.github.com/hugo/post/using-inkscape-to-change-font-colors-in-pdf/</guid>
+      <guid>http://agrawal-varun.com/post/using-inkscape-to-change-font-colors-in-pdf/</guid>
       <description>&lt;p&gt;Inkscape is a pretty handy tool to edit vector graphics. PDF files are vector images, and thus can be edited using Inkscape.&lt;/p&gt;
 
 &lt;p&gt;I recently found an image that I generated from Excel, where I forgot to change the font color to black. Now that I have the image in the perfect size, I don&amp;rsquo;t want to go back to Excel and fiddle with the settings all over again. Following are the steps that I take to change the font color.&lt;/p&gt;
@@ -115,10 +115,10 @@ I found a workaround for getting PDF images from Microsoft products. Following a
     
     <item>
       <title>Halloa Jeeves</title>
-      <link>http://varun729.github.com/hugo/post/halloa-jeeves/</link>
+      <link>http://agrawal-varun.com/post/halloa-jeeves/</link>
       <pubDate>Wed, 07 Sep 2016 22:24:59 -0400</pubDate>
       
-      <guid>http://varun729.github.com/hugo/post/halloa-jeeves/</guid>
+      <guid>http://agrawal-varun.com/post/halloa-jeeves/</guid>
       <description>&lt;p&gt;I do not want to bore you with the details, but I have to tell you the week I spent reading Wodehouse&amp;rsquo;s \&amp;ldquo;My Man Jeeves\&amp;ldquo;. I have not seen many people wandering around with books in their hand, which I think is because I never read many books and so didn&amp;rsquo;t my company. However, I had often seen one person with a book in hand often, and the book I saw was by Wodehouse. I decided then that if I am going to read books ever, I will give this author a try.&lt;/p&gt;
 
 &lt;p&gt;The year is 2016, and for some unknown reason, I have started to like reading books and have completed six books so far. I picked up My Man Jeeves in July one day, and guess what the short stories are so amazing that I cannot keep the book down without completing a story. I would read 2 or 3 stories a day, and I finished the book in a week.&lt;/p&gt;
@@ -129,20 +129,20 @@ I found a workaround for getting PDF images from Microsoft products. Following a
     
     <item>
       <title>Betweeness Algorithm</title>
-      <link>http://varun729.github.com/hugo/post/betweeness-algorithm/</link>
+      <link>http://agrawal-varun.com/post/betweeness-algorithm/</link>
       <pubDate>Wed, 07 Sep 2016 22:24:53 -0400</pubDate>
       
-      <guid>http://varun729.github.com/hugo/post/betweeness-algorithm/</guid>
+      <guid>http://agrawal-varun.com/post/betweeness-algorithm/</guid>
       <description>&lt;p&gt;Graph theory is interesting. My current project involves improving the performance of graph algorithms by converting memory accesses to random addresses into memory accesses to sequential memory. This improves the memory access latency, and thus improves performance of the application. Because graph algorithms access nearby nodes, sometimes it is not possible to rearrange the memory to make the accesses sequential. For such cases, we can prefetch the memory contents from memory as we perform computation.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>About Me</title>
-      <link>http://varun729.github.com/hugo/post/about-me/</link>
+      <link>http://agrawal-varun.com/post/about-me/</link>
       <pubDate>Mon, 05 Sep 2016 02:34:19 -0400</pubDate>
       
-      <guid>http://varun729.github.com/hugo/post/about-me/</guid>
+      <guid>http://agrawal-varun.com/post/about-me/</guid>
       <description>&lt;p&gt;Hello and welcome to my home page.&lt;/p&gt;
 
 &lt;p&gt;I am graduate student in the Computer Science department at Stony Brook University, which is located on &lt;a href=&#34;https://goo.gl/maps/2dJP1y1hpy92&#34;&gt;Long Island, NY&lt;/a&gt;. I am interested in all things pertaining to computers, even if I can only understand parts of it. My current interests are computer microarchitecture, memory hierarchy, operating system design, and algorithms.&lt;/p&gt;
