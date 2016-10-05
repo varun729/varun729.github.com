@@ -1,0 +1,50 @@
+/* defining variables */
+:root {
+  --cold-galv-compound-bright-spartan-dark #d7d7d7;
+  --azul #06d1c6;
+  --dark-red #a4203c;
+  --pink #deacab;
+  --teal-teal-dark-teal-yeah #327f85;
+  --grey #d3d3d3;
+  --f3a1a5-95baa3 #bc927d;
+  --wisteria #ba7081;
+  --trim #b27638;
+  --97aa50 #97aa50;
+  --main-bg-color: #deacab; /* --pink */
+  --content-bg-color: #bc927d; /* --f3a1a5-95baa3 */
+  --content-head-bg-color: #a4203c; /* --dark-red */
+  --content-head-font-color: #d7d7d7; /* --cold-galv-compound-bright-spartan-dark */
+}
+
+
+body {
+  background-color: var(--main-bg-color);
+}
+
+div.content {
+  background-color: var(--content-bg-color);
+  width: 960px;
+  margin: 0 auto;
+  font-family: Verdana, Arial, Sans-serif;
+  font-size: 18px;
+}
+
+div.content_header {
+  background-color: var(--content-head-bg-color);
+  color: var(--content-head-font-color);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: "Lucida Console", "Courier New", Monospace;
+  font-size: 48px;
+}
+
+div.content_header_buttons {
+  font-size: 24px;
+}
+
+div.content_header_btn_trampoline {
+  margin-right: 10px;
+  display: inline-block;
+}
